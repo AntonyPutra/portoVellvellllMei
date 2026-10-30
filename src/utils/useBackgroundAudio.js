@@ -4,14 +4,14 @@ import { ASSETS_BASE_URL } from '../constants/projectsData';
 // Candidate paths for background piano BGM
 const AUDIO_SOURCES = [
   `${ASSETS_BASE_URL}/audio/piano-bgm.mp3`,
-  '/uploaded-assets/audio/piano-bgm.mp3',
-  '/assets-static/audio/piano-bgm.mp3'
+  '/assets-static/audio/piano-bgm.mp3',
+  '/uploaded-assets/audio/piano-bgm.mp3'
 ];
 
 export const BGM_PATH = AUDIO_SOURCES[0];
 
 const TARGET_VOLUME = 0.35;
-const FADE_INTERVAL = 30; // ms
+const FADE_INTERVAL = 25; // ms
 const FADE_STEP = 0.035;
 
 /**
@@ -31,7 +31,6 @@ export function useBackgroundAudio() {
     isPlayingRef.current = isPlaying;
   }, [isPlaying]);
 
-  // Clean fade timer
   const clearFadeTimer = () => {
     if (fadeTimerRef.current) {
       clearInterval(fadeTimerRef.current);
@@ -43,25 +42,30 @@ export function useBackgroundAudio() {
   useEffect(() => {
     const audio = new Audio();
     audio.loop = true;
-    audio.volume = 0;
     audio.preload = 'auto';
 
-    // Set initial source
+    // Set initial volume safely (handles iOS read-only volume gracefully)
+    try {
+      audio.volume = TARGET_VOLUME;
+    } catch (e) {}
+
     sourceIndexRef.current = 0;
     audio.src = AUDIO_SOURCES[0];
 
     // Handle source load error: try next candidate path before giving up
-    const handleError = () => {
+    const handleError = (e) => {
+      console.warn('[Audio] Source load error on:', audio.src, e);
       if (sourceIndexRef.current < AUDIO_SOURCES.length - 1) {
         sourceIndexRef.current += 1;
         const nextSrc = AUDIO_SOURCES[sourceIndexRef.current];
-        console.info(`[Audio] Trying alternate source: ${nextSrc}`);
+        console.info(`[Audio] Switching to candidate source: ${nextSrc}`);
         audio.src = nextSrc;
+        audio.load();
         if (isPlayingRef.current) {
           audio.play().catch(() => {});
         }
       } else {
-        console.info('[Audio] MP3 not found at candidate URLs, using ambient piano backup.');
+        console.info('[Audio] All candidate MP3 paths failed, using ambient piano backup.');
       }
     };
 
@@ -80,14 +84,23 @@ export function useBackgroundAudio() {
   // Soft fade in volume to TARGET_VOLUME
   const fadeIn = useCallback((targetAudio) => {
     clearFadeTimer();
-    targetAudio.volume = Math.max(0, targetAudio.volume);
+    try {
+      targetAudio.volume = Math.max(0.05, targetAudio.volume || 0.05);
+    } catch (e) {
+      // iOS volume is read-only, nothing to fade
+      return;
+    }
 
     fadeTimerRef.current = setInterval(() => {
       if (!targetAudio) return;
-      if (targetAudio.volume < TARGET_VOLUME - FADE_STEP) {
-        targetAudio.volume = Math.min(TARGET_VOLUME, targetAudio.volume + FADE_STEP);
-      } else {
-        targetAudio.volume = TARGET_VOLUME;
+      try {
+        if (targetAudio.volume < TARGET_VOLUME - FADE_STEP) {
+          targetAudio.volume = Math.min(TARGET_VOLUME, targetAudio.volume + FADE_STEP);
+        } else {
+          targetAudio.volume = TARGET_VOLUME;
+          clearFadeTimer();
+        }
+      } catch (e) {
         clearFadeTimer();
       }
     }, FADE_INTERVAL);
@@ -99,26 +112,33 @@ export function useBackgroundAudio() {
 
     fadeTimerRef.current = setInterval(() => {
       if (!targetAudio) return;
-      if (targetAudio.volume > FADE_STEP) {
-        targetAudio.volume = Math.max(0, targetAudio.volume - FADE_STEP);
-      } else {
-        targetAudio.volume = 0;
-        try {
+      try {
+        if (targetAudio.volume > FADE_STEP) {
+          targetAudio.volume = Math.max(0, targetAudio.volume - FADE_STEP);
+        } else {
+          targetAudio.volume = 0;
           targetAudio.pause();
-        } catch (e) {}
+          clearFadeTimer();
+          if (onComplete) onComplete();
+        }
+      } catch (e) {
+        try { targetAudio.pause(); } catch (err) {}
         clearFadeTimer();
         if (onComplete) onComplete();
       }
     }, FADE_INTERVAL);
   }, []);
 
-  // Procedural Web Audio Ambient Piano Chords (Backup if MP3 cannot be loaded)
+  // Procedural Web Audio Ambient Piano Chords (Backup if MP3 cannot be decoded)
   const startFallbackSynth = () => {
     if (fallbackSynthRef.current) return;
     try {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
       if (!AudioCtx) return;
       const ctx = new AudioCtx();
+      if (ctx.state === 'suspended') {
+        ctx.resume();
+      }
 
       const chords = [
         [261.63, 329.63, 392.00, 493.88], // Cmaj7
@@ -171,11 +191,16 @@ export function useBackgroundAudio() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Reset error candidate if user explicitly clicks play again
+    // Reset to primary candidate source if previously errored
     if (audio.error && sourceIndexRef.current >= AUDIO_SOURCES.length - 1) {
       sourceIndexRef.current = 0;
       audio.src = AUDIO_SOURCES[0];
+      audio.load();
     }
+
+    try {
+      audio.volume = TARGET_VOLUME;
+    } catch (e) {}
 
     const playPromise = audio.play();
     if (playPromise !== undefined) {
@@ -186,11 +211,16 @@ export function useBackgroundAudio() {
         })
         .catch((err) => {
           console.warn('[Audio] HTML5 Audio play error:', err.message);
-          // Only start fallback synth if file couldn't be decoded
-          if (audio.error) {
-            startFallbackSynth();
-          }
-          setIsPlaying(true);
+          // Try reloading audio and playing once more
+          audio.load();
+          audio.play()
+            .then(() => {
+              setIsPlaying(true);
+            })
+            .catch(() => {
+              startFallbackSynth();
+              setIsPlaying(true);
+            });
         });
     }
   }, [fadeIn]);
