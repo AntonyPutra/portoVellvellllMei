@@ -5,8 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: vallerie_portfolio
     ports:
-      - "8080:80"
+      - "${PORT:-8080}:80"
     volumes:
       - ./uploaded-assets:/var/www/assets:ro
     restart: unless-stopped
-
