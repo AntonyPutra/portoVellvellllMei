@@ -1,26 +1,38 @@
 # 📂 Mei's Archival File Folder Portfolio // BINUS B28 DKV
 
-An interactive, highly aesthetic, skeuomorphic **"Archival File Folder & Scrapbook"** portfolio website crafted for **Mei**, a Visual Communication Design (DKV / Desain Komunikasi Visual) student at **BINUS University (Binusian 28 / B28)**.
+An interactive, production-ready, highly aesthetic skeuomorphic **"Archival File Folder & Scrapbook"** portfolio web application built with **React, Vite, Tailwind CSS, Lucide React, and Framer Motion** for **Mei**, a Visual Communication Design (DKV / Desain Komunikasi Visual) student at **BINUS University (Binusian 28 / B28)**.
 
 > **“Curating ideas into tangible visual narratives.”**  
 > *Instagram:* [@kyuu__rious](https://www.instagram.com/kyuu__rious)
 
 ---
 
-## 🎨 Visual Identity & Color System
+## 🛠️ Tech Stack & Architecture
 
-The design system follows a curated archival aesthetic combining vintage office stationery, Japanese/Swiss editorial grids, and nostalgic Y2K scrapbook elements:
+- **Framework**: React 18 + Vite (fast HMR and optimized production bundle)
+- **Styling**: Tailwind CSS with custom skeuomorphic color tokens & drop shadows
+- **Motion & Physics**: Framer Motion (spring physics for folder opening, tab transitions, and 3D hover effects)
+- **Icons**: Lucide React
+- **Asset Architecture**: Decoupled static asset pipeline consuming images from a centralized static server:
+  ```javascript
+  const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "http://100.73.16.92:8095";
+  ```
+- **Error Handling**: Graceful SVG vector fallbacks (`ArchivalImage`) so the portfolio renders flawlessly even if the asset server is offline or unreachable.
+
+---
+
+## 🎨 Visual Identity & Color System
 
 | Token | Hex Value | Role & Usage |
 |---|---|---|
-| **Primary Deep Plum** | `#37192C` | Contrast tabs, dark accents, typography headers |
-| **Vanilla Cream** | `#FFF3E5` | Document sheets, paper backgrounds, light folder covers |
-| **Vintage Manila Ochre** | `#EAD7B5` / `#D4BD99` | Classic archival file jacket tone & dividers |
-| **Soft Kraft Tan** | `#CBB493` | Intermediate binder layering & kraft tape |
-| **Interior Sheet White** | `#FDFBF7` / `#FFFFFF` | Crisp paper contents & editorial cards |
-| **Vintage Gold Accent** | `#D4AF37` | Foil stamps, metallic paperclips, status badges |
+| **Primary Deep Plum** | `#37192C` | Contrast tabs, dark accents, headings |
+| **Vanilla Cream** | `#FFF3E5` | Paper sheets, folder jackets, light tabs |
+| **Vintage Manila Ochre** | `#EAD7B5` / `#D4BD99` | Archival folder tone & divider edges |
+| **Soft Kraft Tan** | `#CBB493` | Intermediate binder layering & kraft washi tape |
+| **Interior Sheet White** | `#FDFBF7` / `#FFFFFF` | Document pages & case study cards |
+| **Vintage Gold Accent** | `#D4AF37` | Foil stamps, metallic clips, active indicators |
 | **Stamp Red** | `#B33939` | Distressed rubber stamps (*VERIFIED*, *DISPATCHED*) |
-| **Plum Tinted Shadow** | `rgba(55, 25, 44, 0.18)` | Custom warm drop shadows instead of cold harsh black |
+| **Plum Tinted Shadow** | `rgba(55, 25, 44, 0.15)` | Custom warm colored drop shadows |
 
 ---
 
@@ -41,7 +53,7 @@ The design system follows a curated archival aesthetic combining vintage office 
      - **Selasar Nusantara**: Modernized archipelago ikat & heritage textile collective.
    - Interactive **“Inspect Case File”** modal with design challenges, creative solutions, typography specs, and one-click copyable color palette swatches!
 
-3. **`[ARTWORK // 03] - ILLUSTRATION & SCRAPBOOK`**:
+3. **`[ILLUSTRATION // 03] - ILLUSTRATION & SCRAPBOOK`**:
    - Organic scrapbook placement with tilted frames, washi tape corners, and pencil notes:
      - *Midnight at Pasar Santa* (3-Color Risograph Print)
      - *Botanical Reverie* (Mixed Media Flora Spirit)
@@ -74,32 +86,33 @@ The design system follows a curated archival aesthetic combining vintage office 
 
 ## ⚡ Interactive Features & Micro-Interactions
 
-- **Spring-Physics Tab Switching**: Folder tabs elevate with smooth cubic-bezier transitions without page reloads or jitter.
+- **Spring-Physics Tab Switching**: Folder tabs elevate with smooth cubic-bezier transitions using Framer Motion layout animations.
 - **Synthesized Web Audio Engine**: Soft organic paper shuffles, card clicks, and heavy rubber stamp thuds synthesized via the Web Audio API (zero audio files needed, 100% reliable, with an audio ON/OFF toggle).
 - **Studio Desk Lamp Mood**: Toggle between natural daytime studio lighting and an atmospheric warm late-night studio glow.
 - **Interactive 3D Hover Tilt**: Mouse tracking creates a realistic tactile depth effect on polaroid photos and dossier sheets.
 - **Keyboard Shortcuts**: Press **1–6** on your keyboard to instantly switch folder drawers; press **ESC** to dismiss modals.
 - **Fully Responsive**: Adapts seamlessly from wide multi-layer desktop desks to mobile touch binders.
-- **Zero Bloat & 100% Vector**: Built with pure semantic HTML5, modern CSS3, and vanilla JavaScript with embedded SVG vector artwork.
 
 ---
 
 ## 🚀 How to Run Locally
 
-You can open `index.html` directly in any modern browser:
-
+### 1. Install dependencies
 ```bash
-open index.html
+npm install
 ```
 
-Or run with a local static web server:
-
+### 2. Start development server
 ```bash
-# Python 3
-python3 -m http.server 8000
-
-# Or with Node
-npx serve .
+npm run dev
 ```
 
-Then visit `http://localhost:8000` in your browser.
+### 3. Build for production
+```bash
+npm run build
+```
+
+### 4. Preview production build
+```bash
+npm run preview
+```
