@@ -5,6 +5,397 @@
 
 export const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "/assets-static";
 
+// =========================================================================
+// STREET PHOTOGRAPHY CASE STUDIES & ALBUMS (LEVEL 1 & LEVEL 2 ARCHITECTURE)
+// =========================================================================
+export const portfolioProjects = [
+  {
+    id: "kota-lama-nocturne",
+    title: "Kota Lama Nocturne: Sepeda & Cahaya Natrium",
+    category: "Street Photography",
+    date: "Oktober 2024",
+    client: "Personal Street Exploration",
+    location: "Kota Lama & Gereja Blenduk, Semarang",
+    gear: "Sony A7 IV / 35mm f1.4 GM",
+    badge: "Street Photography // 8 Photos",
+    description: "Dokumentasi visual jalanan malam hari menyusuri lorong-lorong peninggalan kolonial di Kota Lama Semarang. Menangkap pantulan aspal basah pasca hujan gerimis di bawah temaram lampu natrium dan pengendara motor klasik.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/kota-lama/cover.webp`,
+    photos: [
+      {
+        id: "kl-01",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/01.webp`,
+        caption: "Lampu natrium kuning membelah kabut malam di lorong Gereja Blenduk.",
+        aspect: "aspect-[16/10]",
+        exif: "1/125s • f/1.4 • ISO 1600"
+      },
+      {
+        id: "kl-02",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/02.webp`,
+        caption: "Siluet pengendara Vespa klasik melintasi genangan air di depan Gedung Marba.",
+        aspect: "aspect-[3/4]",
+        exif: "1/160s • f/1.8 • ISO 2000"
+      },
+      {
+        id: "kl-03",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/03.webp`,
+        caption: "Pintu kayu jati berkarat dengan gembok tembaga tua berlumut.",
+        aspect: "aspect-[4/5]",
+        exif: "1/80s • f/2.0 • ISO 800"
+      },
+      {
+        id: "kl-04",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/04.webp`,
+        caption: "Pantulan neon merah kedai kopi antik di atas genangan aspal berlubang.",
+        aspect: "aspect-[1/1]",
+        exif: "1/200s • f/1.4 • ISO 1250"
+      },
+      {
+        id: "kl-05",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/05.webp`,
+        caption: "Kucing jalanan berteduh di bawah teras arkade kolonial saat gerimis.",
+        aspect: "aspect-[3/4]",
+        exif: "1/100s • f/1.8 • ISO 3200"
+      },
+      {
+        id: "kl-06",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/06.webp`,
+        caption: "Lengkung jendela kaca patri memantulkan lalu lalang lampu mobil.",
+        aspect: "aspect-[16/10]",
+        exif: "1/250s • f/2.8 • ISO 640"
+      },
+      {
+        id: "kl-07",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/07.webp`,
+        caption: "Pengamen biola tua memainkan tembang di sudut jembatan Berok.",
+        aspect: "aspect-[4/5]",
+        exif: "1/125s • f/1.4 • ISO 2500"
+      },
+      {
+        id: "kl-08",
+        url: `${ASSETS_BASE_URL}/portfolio/kota-lama/08.webp`,
+        caption: "Sudut jalan hening jelang pukul dua pagi di bawah kanopi besi tempa.",
+        aspect: "aspect-[3/4]",
+        exif: "1/60s • f/1.4 • ISO 1600"
+      }
+    ]
+  },
+  {
+    id: "pasar-johar-dawn",
+    title: "Denyut Fajar Pasar Johar: Karsten & Rempah",
+    category: "Street Documentary",
+    date: "Agustus 2024",
+    client: "Visual Heritage Study",
+    location: "Pasar Johar, Semarang",
+    gear: "Fujifilm X-T5 / 23mm f2.0 WR",
+    badge: "Street Documentary // 8 Photos",
+    description: "Esai foto jalanan mendokumentasikan dinamika pedagang rempah dan sayur saat fajar merekah di dalam mahakarya arsitektur kolom jamur Thomas Karsten. Berkas cahaya pagi yang menembus kisi-kisi ventilasi menciptakan drama siluet natural.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/pasar-johar/cover.webp`,
+    photos: [
+      {
+        id: "pj-01",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/01.webp`,
+        caption: "Berkas cahaya matahari fajar menembus kolom jamur beton Pasar Johar.",
+        aspect: "aspect-[16/10]",
+        exif: "1/500s • f/2.8 • ISO 400"
+      },
+      {
+        id: "pj-02",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/02.webp`,
+        caption: "Tangan terampil menimbang cengkeh dan kapulaga di atas timbangan bebek tua.",
+        aspect: "aspect-[4/5]",
+        exif: "1/250s • f/2.0 • ISO 800"
+      },
+      {
+        id: "pj-03",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/03.webp`,
+        caption: "Keranjang bambu anyaman penuh cabai rawit merah menyala berlatar dinding semen.",
+        aspect: "aspect-[1/1]",
+        exif: "1/320s • f/2.8 • ISO 320"
+      },
+      {
+        id: "pj-04",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/04.webp`,
+        caption: "Pedagang jamu gendong meracik kunyit asam di sela riuhnya tawar menawar.",
+        aspect: "aspect-[3/4]",
+        exif: "1/200s • f/2.0 • ISO 640"
+      },
+      {
+        id: "pj-05",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/05.webp`,
+        caption: "Kuli panggul karung bawang melangkah di tangga berundak beton cagar budaya.",
+        aspect: "aspect-[3/4]",
+        exif: "1/400s • f/3.2 • ISO 400"
+      },
+      {
+        id: "pj-06",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/06.webp`,
+        caption: "Asap rokok kretek melayang bersama aroma daun pisang dan ketumbar.",
+        aspect: "aspect-[16/10]",
+        exif: "1/160s • f/2.0 • ISO 1250"
+      },
+      {
+        id: "pj-07",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/07.webp`,
+        caption: "Senyum hangat penjual tempe mendoan menyambut pembeli langganan.",
+        aspect: "aspect-[4/5]",
+        exif: "1/250s • f/2.0 • ISO 500"
+      },
+      {
+        id: "pj-08",
+        url: `${ASSETS_BASE_URL}/portfolio/pasar-johar/08.webp`,
+        caption: "Perspektif tinggi memamerkan simetri atap sirip ventilasi Karsten.",
+        aspect: "aspect-[16/10]",
+        exif: "1/640s • f/4.0 • ISO 200"
+      }
+    ]
+  },
+  {
+    id: "penyeberang-pemuda",
+    title: "Penyeberang Jalan Pemuda: Bayangan & Kecepatan",
+    category: "Street & Urban Geometry",
+    date: "Mei 2024",
+    client: "Independent Urban Essay",
+    location: "Simpang Lima & Jl. Pemuda, Semarang",
+    gear: "Leica Q2 / Summilux 28mm f1.7",
+    badge: "Urban Geometry // 7 Photos",
+    description: "Eksplorasi garis-garis zebra cross, bayangan sudut tajam terik matahari tropis tengah hari, dan figur manusia urban yang terisolasi dalam ritme cepat kota metropolitan Jawa Tengah.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/cover.webp`,
+    photos: [
+      {
+        id: "jp-01",
+        url: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/01.webp`,
+        caption: "Siluet tunggal pejalan kaki berpayung kuning menyeberang zebra cross bersudut miring.",
+        aspect: "aspect-[3/4]",
+        exif: "1/1000s • f/4.0 • ISO 100"
+      },
+      {
+        id: "jp-02",
+        url: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/02.webp`,
+        caption: "Bayangan tiang lampu lalu lintas memotong laju bus kota secara geometris.",
+        aspect: "aspect-[16/10]",
+        exif: "1/800s • f/2.8 • ISO 100"
+      },
+      {
+        id: "jp-03",
+        url: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/03.webp`,
+        caption: "Refleksi kaca fasad gedung perkantoran memperbanyak bayangan pedestrian.",
+        aspect: "aspect-[4/5]",
+        exif: "1/1250s • f/3.5 • ISO 100"
+      },
+      {
+        id: "jp-04",
+        url: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/04.webp`,
+        caption: "Langkah tergesa siswi sekolah di atas trotoar bermotif grafis paving.",
+        aspect: "aspect-[3/4]",
+        exif: "1/640s • f/2.0 • ISO 160"
+      },
+      {
+        id: "jp-05",
+        url: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/05.webp`,
+        caption: "Pemberhentian lampu merah Simpang Lima dilihat dari perspektif aspal rendah.",
+        aspect: "aspect-[16/10]",
+        exif: "1/500s • f/2.8 • ISO 100"
+      },
+      {
+        id: "jp-06",
+        url: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/06.webp`,
+        caption: "Pekerja kantor melirik arloji di bawah naungan pohon asam tua.",
+        aspect: "aspect-[4/5]",
+        exif: "1/320s • f/1.7 • ISO 200"
+      },
+      {
+        id: "jp-07",
+        url: `${ASSETS_BASE_URL}/portfolio/jalan-pemuda/07.webp`,
+        caption: "Garis bayangan pagar besi menciptakan pola bergaris ritmis di aspal panas.",
+        aspect: "aspect-[1/1]",
+        exif: "1/1600s • f/4.5 • ISO 100"
+      }
+    ]
+  },
+  {
+    id: "stasiun-tawang-gerimis",
+    title: "Stasiun Tawang: Gerimis, Kereta, dan Penantian",
+    category: "Street & Transit",
+    date: "Januari 2024",
+    client: "Commuter Life Chronicles",
+    location: "Stasiun Semarang Tawang",
+    gear: "Sony A7C / 50mm f1.8",
+    badge: "Transit Life // 7 Photos",
+    description: "Rekaman atmosfer melankolis ruang tunggu stasiun bersejarah berlantai marmer kolonial dan peron beratap lengkung saat gerimis monsun dan air rob melanda pesisir utara.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/cover.webp`,
+    photos: [
+      {
+        id: "st-01",
+        url: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/01.webp`,
+        caption: "Uap lokomotif bercampur rintik hujan di ujung peron jalur tiga.",
+        aspect: "aspect-[16/10]",
+        exif: "1/200s • f/2.0 • ISO 800"
+      },
+      {
+        id: "st-02",
+        url: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/02.webp`,
+        caption: "Lansia duduk di bangku kayu panjang ruang tunggu menatap papan jadwal analog.",
+        aspect: "aspect-[3/4]",
+        exif: "1/125s • f/1.8 • ISO 1250"
+      },
+      {
+        id: "st-03",
+        url: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/03.webp`,
+        caption: "Tetes air hujan di jendela gerbong membiaskan lampu peron stasiun.",
+        aspect: "aspect-[4/5]",
+        exif: "1/80s • f/1.8 • ISO 1600"
+      },
+      {
+        id: "st-04",
+        url: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/04.webp`,
+        caption: "Porter berseragam merah menyusuri rel dengan troli koper berderit.",
+        aspect: "aspect-[16/10]",
+        exif: "1/320s • f/2.5 • ISO 500"
+      },
+      {
+        id: "st-05",
+        url: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/05.webp`,
+        caption: "Lambaian tangan perpisahan dari balik pintu bordes sebelum semboyan 35 berbunyi.",
+        aspect: "aspect-[3/4]",
+        exif: "1/250s • f/1.8 • ISO 1000"
+      },
+      {
+        id: "st-06",
+        url: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/06.webp`,
+        caption: "Pantulan atap lengkung peron di genangan air rembesan rob tepi rel.",
+        aspect: "aspect-[1/1]",
+        exif: "1/400s • f/3.5 • ISO 400"
+      },
+      {
+        id: "st-07",
+        url: `${ASSETS_BASE_URL}/portfolio/stasiun-tawang/07.webp`,
+        caption: "Cangkir kopi seng mengepul di kantin stasiun menemani suara gerimis reda.",
+        aspect: "aspect-[4/5]",
+        exif: "1/100s • f/2.0 • ISO 800"
+      }
+    ]
+  },
+  {
+    id: "gang-lombok-pecinan",
+    title: "Gang Lombok & Pecinan: Aroma Hio dan Warisan",
+    category: "Cultural Street",
+    date: "November 2023",
+    client: "Cultural Heritage Archive",
+    location: "Pecinan Gang Lombok & Klenteng Tay Kak Sie, Semarang",
+    gear: "Fujifilm X-T5 / 33mm f1.4 R LM WR",
+    badge: "Cultural Street // 7 Photos",
+    description: "Penelusuran visual lorong sempit pecinan tertua di Semarang. Menghirup kepulan asap dupa merah, lampion gantung kain sutra, dan kehangatan obrolan warga lintas generasi di teras rumah cagar budaya.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/gang-lombok/cover.webp`,
+    photos: [
+      {
+        id: "gl-01",
+        url: `${ASSETS_BASE_URL}/portfolio/gang-lombok/01.webp`,
+        caption: "Kepulan asap hio dupa meliuk di depan ornamen naga kayu berukir emas.",
+        aspect: "aspect-[3/4]",
+        exif: "1/250s • f/1.4 • ISO 640"
+      },
+      {
+        id: "gl-02",
+        url: `${ASSETS_BASE_URL}/portfolio/gang-lombok/02.webp`,
+        caption: "Gerobak lumpia legendaris dengan daun selada segar dan saus kental cokelat.",
+        aspect: "aspect-[4/5]",
+        exif: "1/320s • f/2.0 • ISO 400"
+      },
+      {
+        id: "gl-03",
+        url: `${ASSETS_BASE_URL}/portfolio/gang-lombok/03.webp`,
+        caption: "Lampion merah bergoyang lembut ditiup angin tepi kali Semarang.",
+        aspect: "aspect-[16/10]",
+        exif: "1/500s • f/2.2 • ISO 250"
+      },
+      {
+        id: "gl-04",
+        url: `${ASSETS_BASE_URL}/portfolio/gang-lombok/04.webp`,
+        caption: "Kakek membaca koran aksara Han di bangku rotan depan pintu kayu lipat.",
+        aspect: "aspect-[3/4]",
+        exif: "1/160s • f/1.4 • ISO 800"
+      },
+      {
+        id: "gl-05",
+        url: `${ASSETS_BASE_URL}/portfolio/gang-lombok/05.webp`,
+        caption: "Jemuran kain merah berderet kontras dengan dinding kapur yang terkelupas.",
+        aspect: "aspect-[1/1]",
+        exif: "1/640s • f/2.8 • ISO 200"
+      },
+      {
+        id: "gl-06",
+        url: `${ASSETS_BASE_URL}/portfolio/gang-lombok/06.webp`,
+        caption: "Lilin merah raksasa menyala khidmat menerangi lorong altar samping klenteng.",
+        aspect: "aspect-[4/5]",
+        exif: "1/80s • f/1.4 • ISO 1600"
+      },
+      {
+        id: "gl-07",
+        url: `${ASSETS_BASE_URL}/portfolio/gang-lombok/07.webp`,
+        caption: "Becak kayuh berhias bendera kecil menanti penumpang di jembatan pecinan.",
+        aspect: "aspect-[16/10]",
+        exif: "1/400s • f/2.5 • ISO 320"
+      }
+    ]
+  },
+  {
+    id: "lesehan-pahlawan-malam",
+    title: "Lesehan Pahlawan: Suara Pemuda di Tengah Kota",
+    category: "Street & Youth Culture",
+    date: "September 2023",
+    client: "Youth Spontaneous Series",
+    location: "Jl. Pahlawan & Taman Indonesia Kaya, Semarang",
+    gear: "Sony A7 IV / 24-70mm f2.8 GM",
+    badge: "Youth Culture // 6 Photos",
+    description: "Dinamika ruang publik perkotaan malam minggu: anak-anak muda berkumpul menggelar tikar, obrolan tawa di warung kopi jahe rempah, dan komunitas skateboard berlatih trik di tepi trotoar lebar.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/lesehan-pahlawan/cover.webp`,
+    photos: [
+      {
+        id: "lp-01",
+        url: `${ASSETS_BASE_URL}/portfolio/lesehan-pahlawan/01.webp`,
+        caption: "Skateboard melayang di udara dengan latar belakang gedung Gubernuran malam hari.",
+        aspect: "aspect-[16/10]",
+        exif: "1/640s • f/2.8 • ISO 3200"
+      },
+      {
+        id: "lp-02",
+        url: `${ASSETS_BASE_URL}/portfolio/lesehan-pahlawan/02.webp`,
+        caption: "Gelas wedang ronde dan jahe rempah mengepul di atas tikar anyam plastik.",
+        aspect: "aspect-[1/1]",
+        exif: "1/100s • f/2.8 • ISO 2000"
+      },
+      {
+        id: "lp-03",
+        url: `${ASSETS_BASE_URL}/portfolio/lesehan-pahlawan/03.webp`,
+        caption: "Lingkaran pemuda bernyanyi akustik diiringi petikan gitar tua dan kajon.",
+        aspect: "aspect-[4/5]",
+        exif: "1/160s • f/2.8 • ISO 2500"
+      },
+      {
+        id: "lp-04",
+        url: `${ASSETS_BASE_URL}/portfolio/lesehan-pahlawan/04.webp`,
+        caption: "Penjual jagung bakar mengibaskan kipas bambu menebarkan bunga bara api.",
+        aspect: "aspect-[3/4]",
+        exif: "1/200s • f/2.8 • ISO 1600"
+      },
+      {
+        id: "lp-05",
+        url: `${ASSETS_BASE_URL}/portfolio/lesehan-pahlawan/05.webp`,
+        caption: "Sorot lampu motor matik membentuk jejak cahaya panjang di aspal asri.",
+        aspect: "aspect-[16/10]",
+        exif: "1/4s • f/8.0 • ISO 100"
+      },
+      {
+        id: "lp-06",
+        url: `${ASSETS_BASE_URL}/portfolio/lesehan-pahlawan/06.webp`,
+        caption: "Tawa riang sekelompok mahasiswi menikmati tahu petis hangat menjelang tengah malam.",
+        aspect: "aspect-[4/5]",
+        exif: "1/125s • f/2.8 • ISO 2000"
+      }
+    ]
+  }
+];
+
 export const PORTFOLIO_DATA = {
   profile: {
     name: "Vallerie Sharon Wibowo",
@@ -186,208 +577,6 @@ export const PORTFOLIO_DATA = {
     }
   ],
 
-  // =========================================================================
-  // TAB 04: PHOTOGRAPHY PORTFOLIO (MULTI-ALBUM ARCHIVE)
-  // =========================================================================
-  portfolio: [
-    // 1. PORTRAIT & FASHION
-    {
-      id: "photo-p1",
-      subCategory: "portrait",
-      subCategoryLabel: "Portrait & Fashion",
-      title: "Gilded Sfumato: The Studio Portrait",
-      seriesTitle: "Sfumato & Silhouette Studies",
-      roll: "ROLL #24-01A",
-      image: `${ASSETS_BASE_URL}/portfolio/portrait/sfumato-portrait.webp`,
-      camera: "Sony A7 IV // 35mm f/1.4 GM",
-      exif: { iso: "200", shutter: "1/320s", aperture: "f/1.8", focal: "35mm" },
-      location: "Studio C, BINUS Semarang",
-      year: "2024",
-      aspect: "aspect-[3/4]",
-      description: "High-contrast editorial portrait study balancing continuous tungsten key light with deep plum velvet backdrops. Focused on sculptural bone structure and textile texture.",
-      tags: ["Editorial", "Studio Lighting", "Tungsten Glow", "35mm Prime"]
-    },
-    {
-      id: "photo-p2",
-      subCategory: "portrait",
-      subCategoryLabel: "Portrait & Fashion",
-      title: "Whispers of Linen // Autumn Lookbook",
-      seriesTitle: "Earth & Tailored Linen",
-      roll: "ROLL #24-01B",
-      image: `${ASSETS_BASE_URL}/portfolio/portrait/linen-lookbook.webp`,
-      camera: "Fujifilm X-T5 // 56mm f/1.2 R WR",
-      exif: { iso: "160", shutter: "1/500s", aperture: "f/1.4", focal: "56mm" },
-      location: "Lawang Sewu Arcade, Semarang",
-      year: "2024",
-      aspect: "aspect-[4/5]",
-      description: "Natural daylight lookbook capture highlighting raw linen drape against weathered colonial archways. Hand-graded with muted warm earth tones.",
-      tags: ["Natural Light", "Fashion Lookbook", "Fuji Film Simulation", "Colonial Heritage"]
-    },
-    {
-      id: "photo-p3",
-      subCategory: "portrait",
-      subCategoryLabel: "Portrait & Fashion",
-      title: "Chroma Noir: The Avant-Garde Profile",
-      seriesTitle: "Prismatic Gaze",
-      roll: "ROLL #24-01C",
-      image: `${ASSETS_BASE_URL}/portfolio/portrait/chroma-noir.webp`,
-      camera: "Sony A7C // 85mm f/1.8",
-      exif: { iso: "400", shutter: "1/200s", aperture: "f/2.0", focal: "85mm" },
-      location: "Old Factory Loft, Semarang",
-      year: "2023",
-      aspect: "aspect-[3/4]",
-      description: "Monochrome character study overlaid with split-diopter acrylic prisms for subtle optical flares and organic distortion.",
-      tags: ["Prism FX", "Experimental", "Monochrome", "85mm Tele"]
-    },
-
-    // 2. STREET & SPONTANEOUS
-    {
-      id: "photo-s1",
-      subCategory: "street",
-      subCategoryLabel: "Street & Spontaneous",
-      title: "Nocturne at Kota Lama Alley",
-      seriesTitle: "Old Town Chronicles",
-      roll: "ROLL #24-02A",
-      image: `${ASSETS_BASE_URL}/portfolio/street/kota-lama-night.webp`,
-      camera: "Leica Q2 // Summilux 28mm f/1.7",
-      exif: { iso: "1600", shutter: "1/125s", aperture: "f/1.7", focal: "28mm" },
-      location: "Kota Lama, Semarang",
-      year: "2024",
-      aspect: "aspect-[16/10]",
-      description: "Spontaneous candid capture of a vintage Vespa rider passing under sodium vapor streetlights after an evening drizzle.",
-      tags: ["Candid Street", "Nocturne", "Rain Wet Pavement", "28mm Wide"]
-    },
-    {
-      id: "photo-s2",
-      subCategory: "street",
-      subCategoryLabel: "Street & Spontaneous",
-      title: "Morning Market Rhythms: Pasar Johar",
-      seriesTitle: "Daily Ephemera",
-      roll: "ROLL #24-02B",
-      image: `${ASSETS_BASE_URL}/portfolio/street/pasar-johar-dawn.webp`,
-      camera: "Fujifilm X-T5 // 23mm f/2 WR",
-      exif: { iso: "800", shutter: "1/250s", aperture: "f/2.8", focal: "23mm" },
-      location: "Pasar Johar, Semarang",
-      year: "2024",
-      aspect: "aspect-[3/4]",
-      description: "Shafts of morning dust light slicing through Karsten’s historic concrete mushroom columns as spice merchants arrange their morning produce.",
-      tags: ["Documentary", "Heritage Architecture", "Morning Dust", "Human Interest"]
-    },
-    {
-      id: "photo-s3",
-      subCategory: "street",
-      subCategoryLabel: "Street & Spontaneous",
-      title: "The Crossing at Jalan Pemuda",
-      seriesTitle: "Transit Solitude",
-      roll: "ROLL #24-02C",
-      image: `${ASSETS_BASE_URL}/portfolio/street/pemuda-crossing.webp`,
-      camera: "Sony A7 IV // 35mm f/1.4 GM",
-      exif: { iso: "100", shutter: "1/1000s", aperture: "f/2.2", focal: "35mm" },
-      location: "Jalan Pemuda, Semarang",
-      year: "2023",
-      aspect: "aspect-[4/5]",
-      description: "Geometric crosswalk shadows cast by harsh midday tropical sun, freezing a lone pedestrian caught mid-stride with yellow umbrella.",
-      tags: ["Geometric Shadow", "High Contrast", "Midday Sun", "Minimal Street"]
-    },
-
-    // 3. EVENT & LIFESTYLE
-    {
-      id: "photo-e1",
-      subCategory: "event",
-      subCategoryLabel: "Event & Lifestyle",
-      title: "Backstage Tension: Metamorphosis Showcase",
-      seriesTitle: "Design Exhibition BTS",
-      roll: "ROLL #24-03A",
-      image: `${ASSETS_BASE_URL}/portfolio/event/backstage-showcase.webp`,
-      camera: "Sony A7 IV // 24-70mm f/2.8 GM",
-      exif: { iso: "3200", shutter: "1/160s", aperture: "f/2.8", focal: "48mm" },
-      location: "Exhibition Hall, BINUS Semarang",
-      year: "2024",
-      aspect: "aspect-[16/10]",
-      description: "Intimate backstage documentary capturing designers making final adhesive adjustments to exhibition panels five minutes before the gallery doors opened.",
-      tags: ["Event BTS", "Low Light", "Documentary", "Campus Life"]
-    },
-    {
-      id: "photo-e2",
-      subCategory: "event",
-      subCategoryLabel: "Event & Lifestyle",
-      title: "The Indie Soundstage // Acoustic Echoes",
-      seriesTitle: "Live Music Sessions",
-      roll: "ROLL #24-03B",
-      image: `${ASSETS_BASE_URL}/portfolio/event/acoustic-sessions.webp`,
-      camera: "Fujifilm X-T5 // 33mm f/1.4 R LM WR",
-      exif: { iso: "2500", shutter: "1/200s", aperture: "f/1.4", focal: "33mm" },
-      location: "Kedai Kopi Antik, Semarang",
-      year: "2024",
-      aspect: "aspect-[3/4]",
-      description: "Warm amber stage glow catching acoustic guitar strings and brass microphone grille during an intimate live acoustic session.",
-      tags: ["Live Gig", "Atmospheric Amber", "Concert Photography", "Acoustic"]
-    },
-    {
-      id: "photo-e3",
-      subCategory: "event",
-      subCategoryLabel: "Event & Lifestyle",
-      title: "Zine Exchange & Screenprint Collective",
-      seriesTitle: "Printmaker Chronicles",
-      roll: "ROLL #24-03C",
-      image: `${ASSETS_BASE_URL}/portfolio/event/zine-market.webp`,
-      camera: "Sony A7C // 35mm f/1.8",
-      exif: { iso: "640", shutter: "1/250s", aperture: "f/2.0", focal: "35mm" },
-      location: "Semarang Art Market",
-      year: "2023",
-      aspect: "aspect-[4/5]",
-      description: "Inky fingers inspecting fresh silkscreen test sheets laid out on butcher paper during the annual campus print exchange.",
-      tags: ["Art Market", "Screenprint", "Hands at Work", "Community"]
-    },
-
-    // 4. CONCEPTUAL & STILL LIFE
-    {
-      id: "photo-c1",
-      subCategory: "conceptual",
-      subCategoryLabel: "Conceptual",
-      title: "Ephemeral Refractions // Glass & Amber",
-      seriesTitle: "Light & Liquid Geometry",
-      roll: "ROLL #24-04A",
-      image: `${ASSETS_BASE_URL}/portfolio/conceptual/glass-refractions.webp`,
-      camera: "Sony A7 IV // 90mm f/2.8 Macro G OSS",
-      exif: { iso: "100", shutter: "1/80s", aperture: "f/5.6", focal: "90mm" },
-      location: "Natural Light Lab, Semarang",
-      year: "2024",
-      aspect: "aspect-[3/4]",
-      description: "Macro study of afternoon caustics projected through antique ribbed glass bottles onto deckle-edge washi paper sheets.",
-      tags: ["Macro", "Caustics", "Still Life", "Glass Refraction"]
-    },
-    {
-      id: "photo-c2",
-      subCategory: "conceptual",
-      subCategoryLabel: "Conceptual",
-      title: "The Architecture of Silence",
-      seriesTitle: "Shadow Minimal",
-      roll: "ROLL #24-04B",
-      image: `${ASSETS_BASE_URL}/portfolio/conceptual/architecture-silence.webp`,
-      camera: "Leica Q2 // Summilux 28mm f/1.7",
-      exif: { iso: "100", shutter: "1/500s", aperture: "f/4.0", focal: "28mm" },
-      location: "Grand Mosque Pavilion, Semarang",
-      year: "2024",
-      aspect: "aspect-[16/10]",
-      description: "Monochrome architectural study dissecting the interplay of stark geometric shadow lines across white marble colonnades.",
-      tags: ["Architectural", "Monochrome", "Minimalism", "Shadow Play"]
-    },
-    {
-      id: "photo-c3",
-      subCategory: "conceptual",
-      subCategoryLabel: "Conceptual",
-      title: "Botanical Cyanotype // Pressed Flora",
-      seriesTitle: "Alternative Processes",
-      roll: "ROLL #24-04C",
-      image: `${ASSETS_BASE_URL}/portfolio/conceptual/cyanotype-flora.webp`,
-      camera: "Sony A7 IV // 50mm f/1.4 GM",
-      exif: { iso: "100", shutter: "1/200s", aperture: "f/2.8", focal: "50mm" },
-      location: "Campus Darkroom, Semarang",
-      year: "2023",
-      aspect: "aspect-[4/5]",
-      description: "Sun-exposed Prussian blue cyanotype print of wild Semarang mountain ferns, capturing delicate cellular veining under direct midday sunlight.",
-      tags: ["Cyanotype", "Alternative Process", "Prussian Blue", "Pressed Flora"]
-    }
-  ]
+  // Portfolio nested project collections
+  portfolio: portfolioProjects
 };

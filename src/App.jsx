@@ -220,7 +220,7 @@ export function App() {
 
             {activeTab === 'portfolio' && (
               <PortfolioTab
-                items={PORTFOLIO_DATA.portfolio}
+                projects={PORTFOLIO_DATA.portfolio}
                 onShowToast={showToast}
               />
             )}
