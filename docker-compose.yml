@@ -9,3 +9,4 @@ services:
     volumes:
       - ./uploaded-assets:/var/www/assets:ro
     restart: unless-stopped
+

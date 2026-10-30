@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Volume2, VolumeX, Sun, Moon, Instagram, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Volume2, VolumeX, Music, Sun, Moon, Instagram, ArrowUpRight, Sparkles } from 'lucide-react';
 import { PORTFOLIO_DATA } from './constants/projectsData';
 import { FolderTabs } from './components/FolderTabs';
 import { FolderSheet } from './components/FolderSheet';
@@ -8,15 +8,18 @@ import { ProjectGalleryTab } from './components/tabs/ProjectGalleryTab';
 import { ContactTab } from './components/tabs/ContactTab';
 import { ArchivalImage } from './utils/vectorFallbacks';
 import { soundEngine } from './utils/soundEngine';
+import { useBackgroundAudio } from './utils/useBackgroundAudio';
 
 export function App() {
   const [activeTab, setActiveTab] = useState('about');
-  const [soundEnabled, setSoundEnabled] = useState(true);
   const [isNightMode, setIsNightMode] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
   const [isPolaroidModalOpen, setIsPolaroidModalOpen] = useState(false);
 
-  // Keyboard shortcut listener: 1-6 for tabs, ESC for modal
+  // Background Piano Audio Hook
+  const { isPlaying: isBgmPlaying, toggleBgm } = useBackgroundAudio();
+
+  // Keyboard shortcut listener: 1-6 for tabs, ESC for modal, M for piano BGM
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) {
@@ -25,6 +28,11 @@ export function App() {
 
       if (e.key === 'Escape') {
         setIsPolaroidModalOpen(false);
+      }
+
+      if (e.key === 'm' || e.key === 'M') {
+        const next = toggleBgm();
+        showToast(next ? "🎵 Piano BGM: Playing" : "🔇 Piano BGM: Paused");
       }
 
       const num = parseInt(e.key, 10);
@@ -36,7 +44,7 @@ export function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [toggleBgm]);
 
   const showToast = (msg) => {
     setToastMessage(msg);
@@ -47,16 +55,12 @@ export function App() {
 
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
-    if (soundEnabled) {
-      soundEngine.playTabClick();
-    }
+    soundEngine.playTabClick();
   };
 
-  const toggleSound = () => {
-    const next = soundEngine.toggle();
-    setSoundEnabled(next);
-    if (next) soundEngine.playTabClick();
-    showToast(next ? "🎧 Tactile Sound: ON" : "🔇 Tactile Sound: OFF");
+  const handleToggleBgm = () => {
+    const next = toggleBgm();
+    showToast(next ? "🎵 Piano BGM: Playing" : "🔇 Piano BGM: Paused");
   };
 
   const toggleLamp = () => {
@@ -66,7 +70,6 @@ export function App() {
   };
 
   const handlePlaySound = (type) => {
-    if (!soundEnabled) return;
     if (type === 'stamp') soundEngine.playStampThud();
     else if (type === 'clip') soundEngine.playClipSound();
     else soundEngine.playPaperRustle();
@@ -120,15 +123,34 @@ export function App() {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-2.5 ml-auto sm:ml-0 flex-wrap">
-            {/* Audio Toggle */}
+            {/* Background Piano Audio Toggle Button */}
             <button
               type="button"
-              onClick={toggleSound}
-              className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1.5 bg-[#FDFBF7] hover:bg-[#FFFFFF] border border-[#D4BD99] rounded-md font-mono text-[11px] sm:text-xs font-semibold text-[#37192C] transition-all hover:-translate-y-0.5 shadow-sm"
-              title="Toggle Tactile Desk Audio"
+              onClick={handleToggleBgm}
+              className={`inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-md font-mono text-[11px] sm:text-xs font-semibold transition-all hover:-translate-y-0.5 shadow-sm select-none ${
+                isBgmPlaying
+                  ? 'bg-[#37192C] text-[#FFF3E5] border border-[#37192C] shadow-[0_0_12px_rgba(55,25,44,0.35)]'
+                  : 'bg-[#FDFBF7] hover:bg-[#FFFFFF] text-[#6B5B65] border border-[#D4BD99]'
+              }`}
+              title={isBgmPlaying ? "Pause Piano BGM (Press M)" : "Play Piano BGM"}
             >
-              {soundEnabled ? <Volume2 className="w-3.5 h-3.5 text-[#37192C]" /> : <VolumeX className="w-3.5 h-3.5 text-[#6B5B65]" />}
-              <span>{soundEnabled ? 'Sound: ON' : 'Sound: OFF'}</span>
+              {isBgmPlaying ? (
+                <>
+                  <Volume2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Piano BGM</span>
+                  {/* Animated 3-bar mini equalizer indicator */}
+                  <div className="flex items-end gap-[2px] h-3 w-2.5 ml-0.5" aria-hidden="true">
+                    <span className="w-[2px] bg-[#D4AF37] rounded-full animate-[pulse_0.6s_ease-in-out_infinite] h-2" />
+                    <span className="w-[2px] bg-[#D4AF37] rounded-full animate-[pulse_0.4s_ease-in-out_infinite] h-3" />
+                    <span className="w-[2px] bg-[#D4AF37] rounded-full animate-[pulse_0.7s_ease-in-out_infinite] h-1.5" />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <VolumeX className="w-3.5 h-3.5 text-[#6B5B65]" />
+                  <span>Piano BGM</span>
+                </>
+              )}
             </button>
 
             {/* Studio Lamp Toggle */}
