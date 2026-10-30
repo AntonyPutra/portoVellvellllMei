@@ -22,7 +22,7 @@ export const VectorFallbacks = {
           <line x1="140" y1="0" x2="140" y2="480"/>
           <line x1="280" y1="0" x2="280" y2="480"/>
         </g>
-        {/* Mei Character Silhouette & Portrait */}
+        {/* Character Silhouette & Portrait */}
         <ellipse cx="210" cy="220" rx="90" ry="105" fill="#1C0E17"/>
         <circle cx="210" cy="120" r="44" fill="#1C0E17"/>
         {/* Bun pencil */}
@@ -47,6 +47,68 @@ export const VectorFallbacks = {
         <ellipse cx="280" cy="350" rx="16" ry="22" fill="#37192C" stroke="#D4AF37" strokeWidth="2"/>
         <path d="M 135 300 Q 210 320 285 300" stroke="#CBB493" strokeWidth="5" fill="none" strokeLinecap="round"/>
         <text x="390" y="465" fontFamily="monospace" fontSize="10" fill="#E88D67" textAnchor="end" opacity="0.8">’24 10 30</text>
+      </svg>
+    );
+  },
+
+  photography(title = "FILM STUDY", metadata = "35mm // KODAK 400TX") {
+    return (
+      <svg viewBox="0 0 500 620" className="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="filmGlow" cx="50%" cy="40%" r="60%">
+            <stop offset="0%" stopColor="#4A263D"/>
+            <stop offset="70%" stopColor="#24101D"/>
+            <stop offset="100%" stopColor="#150812"/>
+          </radialGradient>
+        </defs>
+        <rect width="500" height="620" fill="url(#filmGlow)"/>
+        
+        {/* Medium format film rebate notches */}
+        <g fill="#FFF3E5" opacity="0.25">
+          <rect x="15" y="30" width="8" height="14" rx="2"/>
+          <rect x="15" y="70" width="8" height="14" rx="2"/>
+          <rect x="15" y="110" width="8" height="14" rx="2"/>
+          <rect x="15" y="500" width="8" height="14" rx="2"/>
+          <rect x="15" y="540" width="8" height="14" rx="2"/>
+          <rect x="15" y="580" width="8" height="14" rx="2"/>
+          <rect x="477" y="30" width="8" height="14" rx="2"/>
+          <rect x="477" y="70" width="8" height="14" rx="2"/>
+          <rect x="477" y="110" width="8" height="14" rx="2"/>
+          <rect x="477" y="500" width="8" height="14" rx="2"/>
+          <rect x="477" y="540" width="8" height="14" rx="2"/>
+          <rect x="477" y="580" width="8" height="14" rx="2"/>
+        </g>
+
+        {/* Viewfinder focus brackets */}
+        <g stroke="#D4AF37" strokeWidth="1.5" fill="none" opacity="0.6">
+          <path d="M 180 230 L 170 230 L 170 240"/>
+          <path d="M 320 230 L 330 230 L 330 240"/>
+          <path d="M 180 370 L 170 370 L 170 360"/>
+          <path d="M 320 370 L 330 370 L 330 360"/>
+          <circle cx="250" cy="300" r="4" fill="#D4AF37"/>
+          <circle cx="250" cy="300" r="36" strokeDasharray="3 3"/>
+        </g>
+
+        {/* Atmospheric silhouette */}
+        <ellipse cx="250" cy="290" rx="75" ry="95" fill="#1C0E17"/>
+        <circle cx="250" cy="205" r="42" fill="#1C0E17"/>
+        <path d="M 170 420 Q 250 360 330 420 L 360 560 L 140 560 Z" fill="#321728"/>
+
+        {/* Film metadata edge stamping */}
+        <text x="35" y="30" fontFamily="monospace" fontSize="9" fill="#D4AF37" opacity="0.75" letterSpacing="1">
+          KODAK 400TX // EXPOSURE 18A
+        </text>
+        <text x="35" y="595" fontFamily="monospace" fontSize="8" fill="#FFF3E5" opacity="0.6" letterSpacing="1">
+          SEMARANG, ID // {metadata}
+        </text>
+
+        {/* Series Title */}
+        <text x="250" y="475" fontFamily="serif" fontSize="18" fill="#FFF3E5" textAnchor="middle" fontStyle="italic">
+          {title}
+        </text>
+        <text x="250" y="500" fontFamily="monospace" fontSize="9" fill="#EAD7B5" textAnchor="middle" letterSpacing="2">
+          PHOTO ARCHIVE // VALLERIE
+        </text>
       </svg>
     );
   },
@@ -104,6 +166,7 @@ export function ArchivalImage({ src, alt, fallbackType = "generic", className = 
   if (hasError || !src) {
     if (fallbackType === "profile") return <div className={className}>{VectorFallbacks.profile()}</div>;
     if (fallbackType === "branding") return <div className={className}>{VectorFallbacks.branding(title)}</div>;
+    if (fallbackType === "photography") return <div className={className}>{VectorFallbacks.photography(title, alt)}</div>;
     return <div className={className}>{VectorFallbacks.generic(title || alt)}</div>;
   }
 
@@ -124,4 +187,3 @@ export function ArchivalImage({ src, alt, fallbackType = "generic", className = 
     </div>
   );
 }
-

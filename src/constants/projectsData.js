@@ -40,9 +40,8 @@ export const PORTFOLIO_DATA = {
     { id: "about", label: "INDEX // ABOUT ME", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "01" },
     { id: "branding", label: "BRANDING", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "02" },
     { id: "illustration", label: "ILLUSTRATION", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "03" },
-    { id: "editorial", label: "EDITORIAL", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "04" },
-    { id: "social", label: "SOCIAL MEDIA", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "05" },
-    { id: "contact", label: "CONTACT // MEMO", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "06" }
+    { id: "portfolio", label: "PORTFOLIO", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "04" },
+    { id: "contact", label: "CONTACT // MEMO", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "05" }
   ],
 
   branding: [
@@ -101,263 +100,294 @@ export const PORTFOLIO_DATA = {
       year: "2023",
       badge: "FILE // BR-04",
       image: `${ASSETS_BASE_URL}/branding/selasar-mockup.webp`,
-      description: "Modernization of Indonesian ikat and traditional archipelago woven motifs into an accessible, contemporary visual design language.",
-      tags: ["Cultural Rebrand", "Heritage Woven", "Exhibition Catalog", "Archipelago"],
-      deliverables: ["Cultural Rebrand", "Woven Pattern Generator", "Exhibition Catalog", "Tote & Merch System"],
-      colors: ["#37192C", "#C5A059", "#A84A38", "#FFF3E5"],
-      colorNames: ["Heritage Plum", "Songket Gold", "Terracotta Clay", "Raw Cotton"],
-      challenge: "Preserving the sacred symbolism of archipelago textile traditions without commodifying or flattening their deep cultural heritage.",
-      solution: "Collaborated with regional artisan cooperatives to document oral histories. Designed a bilingual catalog with risograph inserts and exposed hand-sewn thread bindings.",
-      typography: "Cormorant Garamond + Plus Jakarta Sans"
+      description: "Contemporary visual archive for artisanal Indonesian woven tenun and batik pedalaman, focusing on sustainable dyeing traditions.",
+      tags: ["Heritage Branding", "Archival System", "Handmade Paper", "Textiles"],
+      deliverables: ["Archive Classification Tag System", "Woven Label Badges", "Textile Certificate", "Blind Emboss Seal"],
+      colors: ["#2C1422", "#9C6A48", "#CBB493", "#F2ECE1"],
+      colorNames: ["Tenun Indigo-Wine", "Terracotta Clay", "Soft Kraft", "Raw Cotton"],
+      challenge: "Bridging ancestral traditional weaving craftsmanship with a clean, gallery-grade visual language for modern collectors.",
+      solution: "Developed an archival index system mimicking museum classification slips, using raw cotton fiber tags stamped with archival plum dye and serial numbering.",
+      typography: "Cormorant Garamond + Space Mono Archive Registry"
     }
   ],
 
   illustration: [
     {
-      id: "art-pasar-santa",
-      title: "Midnight at Pasar Santa",
-      medium: "Risograph 3-Color Print (Fluorescent Pink, Aqua, Plum)",
+      id: "art-solitude",
+      title: "Solitude in the 24-Hour Laundromat",
+      medium: "Digital Painting // Procreate + Custom Charcoal Brush",
       year: "2024",
-      badge: "RISO // 01",
-      image: `${ASSETS_BASE_URL}/illustration/pasar-santa.webp`,
-      description: "Nostalgic nighttime market scene, vintage vinyl booths, neon signs, and quiet street cats.",
-      tags: ["Risograph", "Street Culture", "3-Color Print", "Vinyl Market"],
-      tapeColor: "plum",
-      size: "A3 / 297 × 420 mm",
-      story: "Drawn after late-night exploration through vintage cassette stalls. Printed on 160gsm Munken Lynx paper with intentional slight misregistration to embrace tactile warmth."
+      badge: "PLATE // 01",
+      image: `${ASSETS_BASE_URL}/illustration/solitude-laundromat.webp`,
+      description: "Neon hues reflecting on spinning washing machine drum glass at 2:00 AM.",
+      story: "Drawn during mid-semester studio crunch. The hypnotic cycle of neon teal detergent foam and hum of old coin machines felt like the only quiet pocket in the city.",
+      tags: ["Atmospheric", "Procreate", "Color Study", "Nocturne"],
+      tapeColor: "plum"
     },
     {
-      id: "art-botanical-reverie",
-      title: "Botanical Reverie",
-      medium: "Mixed Media (Procreate & Gouache Textures)",
+      id: "art-botanical",
+      title: "Botanical Specimen: Semarang Ferns",
+      medium: "Mixed Media // Ink Line Work & Digital Watercolor",
       year: "2024",
-      badge: "FLORA // 02",
-      image: `${ASSETS_BASE_URL}/illustration/botanical-reverie.webp`,
-      description: "Surrealist floral character study inspired by tropical ferns, moss gardens, and solitary reflection.",
-      tags: ["Surrealism", "Flora", "Character Design", "Gouache"],
-      tapeColor: "vanilla",
-      size: "4000 × 5000 px Digital Canvas",
-      story: "An exploration of emotional sanctuary through overgrown flora. Delicate linework mirrors botanical etchings while expressive plum and peach tones bring modern warmth."
+      badge: "PLATE // 02",
+      image: `${ASSETS_BASE_URL}/illustration/botanical-ferns.webp`,
+      description: "Taxonomic field study of native Central Java ferns collected near Ungaran.",
+      story: "Exploration in classical naturalist field illustrations. Each frond is mapped with faux handwritten binomial nomenclature and millimeter dimension callouts.",
+      tags: ["Field Study", "Botanical", "Natural History", "Ink"],
+      tapeColor: "gold"
     },
     {
-      id: "art-y2k-memory",
-      title: "Y2K Memory Card // 2004",
-      medium: "Vector Collage & Holographic Foil Art",
+      id: "art-snack",
+      title: "Nostalgic Jajan Pasar Sticker Pack",
+      medium: "Vector Illustration // Adobe Illustrator & Riso Halftone",
       year: "2023",
-      badge: "CYBER // 03",
-      image: `${ASSETS_BASE_URL}/illustration/y2k-memory.webp`,
-      description: "Retro-futuristic cyber nostalgic stickers, transparent tech casings, and early 2000s handheld games.",
-      tags: ["Y2K Nostalgia", "Sticker Sheet", "Holographic", "Vector Scrapbook"],
-      tapeColor: "plum",
-      size: "A4 Sticker Sheet",
-      story: "A love letter to early millennium tech aesthetics: translucent Game Boy plastics, minidiscs, and pixelated desktop pets."
+      badge: "PLATE // 03",
+      image: `${ASSETS_BASE_URL}/illustration/jajan-pasar-stickers.webp`,
+      description: "Retro mascot characters honoring Kue Putu, Lemper, and Kue Lapis Legit.",
+      story: "Commissioned for an indie campus zine fair. Features 90s commercial mascot smiles with screen-printed misregistration halftone textures.",
+      tags: ["Merchandise", "Stickers", "Y2K Retro", "Halftone"],
+      tapeColor: "kraft"
     },
     {
-      id: "art-tea-guardian",
-      title: "The Tea Garden Guardian",
-      medium: "Digital Linocut & Textured Print",
-      year: "2024",
-      badge: "MYTH // 04",
-      image: `${ASSETS_BASE_URL}/illustration/tea-guardian.webp`,
-      description: "Folklore-inspired mystical fox spirit resting among terraced tea leaves under a waxing moon.",
-      tags: ["Folklore", "Linocut", "Kitsune", "Tea Terraces"],
-      tapeColor: "vanilla",
-      size: "300 × 300 mm Art Print",
-      story: "Created as promotional art for an independent tea collective. Features hand-carved woodcut texture brushes, earthy matcha tones, and gold foil accents."
-    },
-    {
-      id: "art-echoes-rain",
-      title: "Echoes in the Rain",
-      medium: "Cinematic Digital Illustration & Film Grain",
+      id: "art-train",
+      title: "Window Seat // Argo Muria Express",
+      medium: "Digital Illustration // CapCut Frame Study & Procreate",
       year: "2023",
-      badge: "TRANSIT // 05",
-      image: `${ASSETS_BASE_URL}/illustration/echoes-rain.webp`,
-      description: "Atmospheric rainy commute through the elevated transit platform.",
-      tags: ["Cinematic", "Urban Solitude", "Bokeh", "Atmospheric"],
-      tapeColor: "plum",
-      size: "3840 × 2160 px (4K)",
-      story: "Capturing the melancholic serenity of waiting on the platform as rain drenches the city. Layers of watercolor washes, wet pavement reflections, and subtle chromatic aberration."
+      badge: "PLATE // 04",
+      image: `${ASSETS_BASE_URL}/illustration/window-seat-train.webp`,
+      description: "Golden hour silhouettes slicing through teak forests between Tawang and Gambir.",
+      story: "Capturing the melancholic transition of traveling between university campus and home. The afternoon sun turned passenger silhouettes into amber silhouettes.",
+      tags: ["Cinematic", "Landscape", "Golden Hour", "Transit"],
+      tapeColor: "vanilla"
     },
     {
-      id: "art-jajanan-pasar",
-      title: "Jajanan Pasar Delights",
-      medium: "Die-Cut Holographic Sticker Sheet",
-      year: "2024",
-      badge: "MERCH // 06",
-      image: `${ASSETS_BASE_URL}/illustration/jajanan-pasar.webp`,
-      description: "Collectible sticker pack paying homage to traditional street treats: Kue Cubit, Martabak, and Es Cendol.",
-      tags: ["Die-Cut", "Street Food", "Vinyl Stickers", "Design Fair"],
-      tapeColor: "vanilla",
-      size: "150 × 210 mm Die-Cut Sheet",
-      story: "Designed for the campus Design Fair. Printed on waterproof holographic vinyl with custom die-cut borders, sold out within the first two hours."
+      id: "art-study",
+      title: "The Typographer’s Cluttered Desk",
+      medium: "Isometric Line Art & Risograph Print",
+      year: "2023",
+      badge: "PLATE // 05",
+      image: `${ASSETS_BASE_URL}/illustration/typographers-desk.webp`,
+      description: "Isometric tribute to bone folders, X-Acto knives, coffee rings, and Pantone swatch books.",
+      story: "Drawn as an ode to late-night studio sessions where coffee rings merge with paper mockups. Hand-printed on 2-color Soy ink Risograph.",
+      tags: ["Isometric", "Risograph", "Studio Life", "Line Art"],
+      tapeColor: "plum"
+    },
+    {
+      id: "art-rain",
+      title: "Monsoon Afternoon in Kota Lama",
+      medium: "Digital Gouache & Film Grain Texture",
+      year: "2023",
+      badge: "PLATE // 06",
+      image: `${ASSETS_BASE_URL}/illustration/monsoon-semarang.webp`,
+      description: "Dutch colonial roofs drenched in November tropical rain, lit by amber streetlamps.",
+      story: "Rainy sketches sheltered under the arcade of Gereja Blenduk. Focused on capturing the reflective cobblestone puddles and misty humidity.",
+      tags: ["Atmospheric", "Semarang", "Rain", "Gouache"],
+      tapeColor: "gold"
     }
   ],
 
-  editorial: [
+  // =========================================================================
+  // TAB 04: PHOTOGRAPHY PORTFOLIO (MULTI-ALBUM ARCHIVE)
+  // =========================================================================
+  portfolio: [
+    // 1. PORTRAIT & FASHION
     {
-      id: "edit-hyphen",
-      title: "HYPHEN: Issue 04 — Liminal Spaces",
-      category: "Indie Art & Architecture Zine",
+      id: "photo-p1",
+      subCategory: "portrait",
+      subCategoryLabel: "Portrait & Fashion",
+      title: "Gilded Sfumato: The Studio Portrait",
+      seriesTitle: "Sfumato & Silhouette Studies",
+      roll: "ROLL #24-01A",
+      image: `${ASSETS_BASE_URL}/portfolio/portrait/sfumato-portrait.webp`,
+      camera: "Sony A7 IV // 35mm f/1.4 GM",
+      exif: { iso: "200", shutter: "1/320s", aperture: "f/1.8", focal: "35mm" },
+      location: "Studio C, BINUS Semarang",
       year: "2024",
-      badge: "PUB // 01",
-      image: `${ASSETS_BASE_URL}/editorial/hyphen-cover.webp`,
-      description: "64-page indie art & architecture publication exploring transition zones: stairwells, transit vestibules, and late-night convenience stores.",
-      tags: ["Zine", "Editorial", "Smyth-Sewn", "French Fold", "Risograph"],
-      specs: "A5 Format // 64 Pages // Munken Pure 120gsm // Exposed Smyth-Sewn Spine",
-      role: "Editor-in-Chief, Lead Typographer, & Bookbinder",
-      spreads: [
-        {
-          label: "Spread 01: Cover & Dust Jacket",
-          image: `${ASSETS_BASE_URL}/editorial/hyphen-spread-1.webp`,
-          caption: "Die-cut plum cardstock revealing the off-white interior riso title page.",
-          quote: "To exist in the in-between is not to be lost; it is to be in motion."
-        },
-        {
-          label: "Spread 02: Typography Essay — 'The Geometry of Quiet Rooms'",
-          image: `${ASSETS_BASE_URL}/editorial/hyphen-spread-2.webp`,
-          caption: "Double-page spread showcasing high-contrast editorial serifs and dynamic asymmetrical columns.",
-          quote: "Architecture remembers the silence long after the footsteps fade."
-        },
-        {
-          label: "Spread 03: Photo Essay & Risograph Centerfold",
-          image: `${ASSETS_BASE_URL}/editorial/hyphen-spread-3.webp`,
-          caption: "Grainy monochrome photography overlaid with translucent amber botanical film.",
-          quote: "Light behaves differently when no one is asking it to perform."
-        },
-        {
-          label: "Spread 04: Colophon & Specimen Index",
-          image: `${ASSETS_BASE_URL}/editorial/hyphen-spread-4.webp`,
-          caption: "Archival grid layout detailing typography licensing, paper weights, and production colophon.",
-          quote: "Printed at Campus Print Lab on Munken Pure 120gsm."
-        }
-      ]
+      aspect: "aspect-[3/4]",
+      description: "High-contrast editorial portrait study balancing continuous tungsten key light with deep plum velvet backdrops. Focused on sculptural bone structure and textile texture.",
+      tags: ["Editorial", "Studio Lighting", "Tungsten Glow", "35mm Prime"]
     },
     {
-      id: "edit-typography",
-      title: "The Anatomy of Elegance",
-      category: "Type Specimen Booklet",
-      year: "2023",
-      badge: "PUB // 02",
-      image: `${ASSETS_BASE_URL}/editorial/typography-specimen.webp`,
-      description: "Exhaustive typographic study deconstructing the structural harmony of Renaissance serifs and optical kerning nuances.",
-      tags: ["Typography", "Type Specimen", "Blind Deboss", "Kerning"],
-      specs: "190 × 260 mm // 32 Pages // Blind Deboss Softcover // Uncoated Cotton Paper",
-      role: "Concept, Layout Design, & Type Specimen Curation",
-      spreads: [
-        {
-          label: "Spread 01: The Serif Hierarchy",
-          image: `${ASSETS_BASE_URL}/editorial/anatomy-spread-1.webp`,
-          caption: "Comparative glyph analysis showing ligature construction and bracket transitions.",
-          quote: "Letters are miniature cathedrals erected on a baseline."
-        }
-      ]
+      id: "photo-p2",
+      subCategory: "portrait",
+      subCategoryLabel: "Portrait & Fashion",
+      title: "Whispers of Linen // Autumn Lookbook",
+      seriesTitle: "Earth & Tailored Linen",
+      roll: "ROLL #24-01B",
+      image: `${ASSETS_BASE_URL}/portfolio/portrait/linen-lookbook.webp`,
+      camera: "Fujifilm X-T5 // 56mm f/1.2 R WR",
+      exif: { iso: "160", shutter: "1/500s", aperture: "f/1.4", focal: "56mm" },
+      location: "Lawang Sewu Arcade, Semarang",
+      year: "2024",
+      aspect: "aspect-[4/5]",
+      description: "Natural daylight lookbook capture highlighting raw linen drape against weathered colonial archways. Hand-graded with muted warm earth tones.",
+      tags: ["Natural Light", "Fashion Lookbook", "Fuji Film Simulation", "Colonial Heritage"]
     },
     {
-      id: "edit-solivagant",
-      title: "Solivagant: Poems from the Commute",
-      category: "Hardcover Poetry Anthology",
+      id: "photo-p3",
+      subCategory: "portrait",
+      subCategoryLabel: "Portrait & Fashion",
+      title: "Chroma Noir: The Avant-Garde Profile",
+      seriesTitle: "Prismatic Gaze",
+      roll: "ROLL #24-01C",
+      image: `${ASSETS_BASE_URL}/portfolio/portrait/chroma-noir.webp`,
+      camera: "Sony A7C // 85mm f/1.8",
+      exif: { iso: "400", shutter: "1/200s", aperture: "f/2.0", focal: "85mm" },
+      location: "Old Factory Loft, Semarang",
       year: "2023",
-      badge: "PUB // 03",
-      image: `${ASSETS_BASE_URL}/editorial/solivagant-cover.webp`,
-      description: "Pocket-sized anthology of free-verse poems written during long commuter train rides.",
-      tags: ["Poetry", "Bookbinding", "Gold Foil Stamping", "Bookcloth"],
-      specs: "120 × 180 mm Pocket Edition // 80 Pages // Plum Bookcloth Hardcover with Gold Foil",
-      role: "Bookbinder, Cover Designer, & Typesetter",
-      spreads: [
-        {
-          label: "Spread 01: Cloth Cover & Gold Stamping",
-          image: `${ASSETS_BASE_URL}/editorial/solivagant-spread-1.webp`,
-          caption: "Deep plum bookcloth embossed with minimal gold foil transit coordinates.",
-          quote: "Wandering alone through unfamiliar landscapes."
-        }
-      ]
-    }
-  ],
+      aspect: "aspect-[3/4]",
+      description: "Monochrome character study overlaid with split-diopter acrylic prisms for subtle optical flares and organic distortion.",
+      tags: ["Prism FX", "Experimental", "Monochrome", "85mm Tele"]
+    },
 
-  social: {
-    campaign: {
-      title: "METAMORPHOSIS // Annual Design Showcase",
-      role: "Visual Identity Lead & Social Media Strategist",
+    // 2. STREET & SPONTANEOUS
+    {
+      id: "photo-s1",
+      subCategory: "street",
+      subCategoryLabel: "Street & Spontaneous",
+      title: "Nocturne at Kota Lama Alley",
+      seriesTitle: "Old Town Chronicles",
+      roll: "ROLL #24-02A",
+      image: `${ASSETS_BASE_URL}/portfolio/street/kota-lama-night.webp`,
+      camera: "Leica Q2 // Summilux 28mm f/1.7",
+      exif: { iso: "1600", shutter: "1/125s", aperture: "f/1.7", focal: "28mm" },
+      location: "Kota Lama, Semarang",
       year: "2024",
-      badge: "EXHIBITION // 2024",
-      image: `${ASSETS_BASE_URL}/social/metamorphosis-poster.webp`,
-      deliverables: ["Visual Key Asset", "9-Grid Countdown Campaign", "Motion Storyboard", "Visitor Badges"],
-      metrics: "Reached over 28,000+ creative accounts; 1,400+ attendees registered through Instagram bio link.",
-      concept: "Visualizing the metamorphic journey of design students from raw sketches to polished artifacts using liquid-chrome forms suspended inside vintage filing envelopes."
+      aspect: "aspect-[16/10]",
+      description: "Spontaneous candid capture of a vintage Vespa rider passing under sodium vapor streetlights after an evening drizzle.",
+      tags: ["Candid Street", "Nocturne", "Rain Wet Pavement", "28mm Wide"]
     },
-    feed: [
-      {
-        id: "feed-1",
-        caption: "Late studio nights at campus ✨ Developing new riso test sheets for the upcoming zine issue. @kyuu__rious",
-        likes: "428",
-        comments: "32",
-        type: "Studio BTS",
-        image: `${ASSETS_BASE_URL}/social/feed-1.webp`
-      },
-      {
-        id: "feed-2",
-        caption: "Color swatches for Kitsune Botanicals. Deep plum and matcha tones make the heart happy 🍵 #photography #illustration #binussemarang",
-        likes: "612",
-        comments: "45",
-        type: "Color Study",
-        image: `${ASSETS_BASE_URL}/social/feed-2.webp`
-      },
-      {
-        id: "feed-3",
-        caption: "Macro details of handbound French folds. Nothing matches the smell of fresh ink on uncoated 160gsm paper 📖",
-        likes: "895",
-        comments: "68",
-        type: "Bookbinding",
-        image: `${ASSETS_BASE_URL}/social/feed-3.webp`
-      },
-      {
-        id: "feed-4",
-        caption: "'Midnight at Pasar Santa' 3-color risograph print test. Which colorway should I bring to the art market? 🐱✨",
-        likes: "740",
-        comments: "54",
-        type: "Risograph",
-        image: `${ASSETS_BASE_URL}/social/feed-4.webp`
-      },
-      {
-        id: "feed-5",
-        caption: "Typography dissection: Ligatures & optical kerning explorations for the editorial specimen series 🖋️",
-        likes: "530",
-        comments: "29",
-        type: "Type Study",
-        image: `${ASSETS_BASE_URL}/social/feed-5.webp`
-      },
-      {
-        id: "feed-6",
-        caption: "Holographic die-cut sticker test! Snack series: Kue cubit setengah matang will always have my heart 🥞",
-        likes: "1,120",
-        comments: "94",
-        type: "Merchandise",
-        image: `${ASSETS_BASE_URL}/social/feed-6.webp`
-      },
-      {
-        id: "feed-7",
-        caption: "Desk diary: A clean desk lasts approximately 4 minutes once the sketching session begins ✂️📎",
-        likes: "488",
-        comments: "37",
-        type: "Desk Diary",
-        image: `${ASSETS_BASE_URL}/social/feed-7.webp`
-      },
-      {
-        id: "feed-8",
-        caption: "Key visual exploratory poster for Campus Showcase 'METAMORPHOSIS' 🦋",
-        likes: "1,340",
-        comments: "118",
-        type: "Event Key Visual",
-        image: `${ASSETS_BASE_URL}/social/feed-8.webp`
-      },
-      {
-        id: "feed-9",
-        caption: "Curating ideas into tangible visual narratives. Thank you for following along on this journey @kyuu__rious ✨",
-        likes: "975",
-        comments: "82",
-        type: "Archive Note",
-        image: `${ASSETS_BASE_URL}/social/feed-9.webp`
-      }
-    ]
-  }
+    {
+      id: "photo-s2",
+      subCategory: "street",
+      subCategoryLabel: "Street & Spontaneous",
+      title: "Morning Market Rhythms: Pasar Johar",
+      seriesTitle: "Daily Ephemera",
+      roll: "ROLL #24-02B",
+      image: `${ASSETS_BASE_URL}/portfolio/street/pasar-johar-dawn.webp`,
+      camera: "Fujifilm X-T5 // 23mm f/2 WR",
+      exif: { iso: "800", shutter: "1/250s", aperture: "f/2.8", focal: "23mm" },
+      location: "Pasar Johar, Semarang",
+      year: "2024",
+      aspect: "aspect-[3/4]",
+      description: "Shafts of morning dust light slicing through Karsten’s historic concrete mushroom columns as spice merchants arrange their morning produce.",
+      tags: ["Documentary", "Heritage Architecture", "Morning Dust", "Human Interest"]
+    },
+    {
+      id: "photo-s3",
+      subCategory: "street",
+      subCategoryLabel: "Street & Spontaneous",
+      title: "The Crossing at Jalan Pemuda",
+      seriesTitle: "Transit Solitude",
+      roll: "ROLL #24-02C",
+      image: `${ASSETS_BASE_URL}/portfolio/street/pemuda-crossing.webp`,
+      camera: "Sony A7 IV // 35mm f/1.4 GM",
+      exif: { iso: "100", shutter: "1/1000s", aperture: "f/2.2", focal: "35mm" },
+      location: "Jalan Pemuda, Semarang",
+      year: "2023",
+      aspect: "aspect-[4/5]",
+      description: "Geometric crosswalk shadows cast by harsh midday tropical sun, freezing a lone pedestrian caught mid-stride with yellow umbrella.",
+      tags: ["Geometric Shadow", "High Contrast", "Midday Sun", "Minimal Street"]
+    },
+
+    // 3. EVENT & LIFESTYLE
+    {
+      id: "photo-e1",
+      subCategory: "event",
+      subCategoryLabel: "Event & Lifestyle",
+      title: "Backstage Tension: Metamorphosis Showcase",
+      seriesTitle: "Design Exhibition BTS",
+      roll: "ROLL #24-03A",
+      image: `${ASSETS_BASE_URL}/portfolio/event/backstage-showcase.webp`,
+      camera: "Sony A7 IV // 24-70mm f/2.8 GM",
+      exif: { iso: "3200", shutter: "1/160s", aperture: "f/2.8", focal: "48mm" },
+      location: "Exhibition Hall, BINUS Semarang",
+      year: "2024",
+      aspect: "aspect-[16/10]",
+      description: "Intimate backstage documentary capturing designers making final adhesive adjustments to exhibition panels five minutes before the gallery doors opened.",
+      tags: ["Event BTS", "Low Light", "Documentary", "Campus Life"]
+    },
+    {
+      id: "photo-e2",
+      subCategory: "event",
+      subCategoryLabel: "Event & Lifestyle",
+      title: "The Indie Soundstage // Acoustic Echoes",
+      seriesTitle: "Live Music Sessions",
+      roll: "ROLL #24-03B",
+      image: `${ASSETS_BASE_URL}/portfolio/event/acoustic-sessions.webp`,
+      camera: "Fujifilm X-T5 // 33mm f/1.4 R LM WR",
+      exif: { iso: "2500", shutter: "1/200s", aperture: "f/1.4", focal: "33mm" },
+      location: "Kedai Kopi Antik, Semarang",
+      year: "2024",
+      aspect: "aspect-[3/4]",
+      description: "Warm amber stage glow catching acoustic guitar strings and brass microphone grille during an intimate live acoustic session.",
+      tags: ["Live Gig", "Atmospheric Amber", "Concert Photography", "Acoustic"]
+    },
+    {
+      id: "photo-e3",
+      subCategory: "event",
+      subCategoryLabel: "Event & Lifestyle",
+      title: "Zine Exchange & Screenprint Collective",
+      seriesTitle: "Printmaker Chronicles",
+      roll: "ROLL #24-03C",
+      image: `${ASSETS_BASE_URL}/portfolio/event/zine-market.webp`,
+      camera: "Sony A7C // 35mm f/1.8",
+      exif: { iso: "640", shutter: "1/250s", aperture: "f/2.0", focal: "35mm" },
+      location: "Semarang Art Market",
+      year: "2023",
+      aspect: "aspect-[4/5]",
+      description: "Inky fingers inspecting fresh silkscreen test sheets laid out on butcher paper during the annual campus print exchange.",
+      tags: ["Art Market", "Screenprint", "Hands at Work", "Community"]
+    },
+
+    // 4. CONCEPTUAL & STILL LIFE
+    {
+      id: "photo-c1",
+      subCategory: "conceptual",
+      subCategoryLabel: "Conceptual",
+      title: "Ephemeral Refractions // Glass & Amber",
+      seriesTitle: "Light & Liquid Geometry",
+      roll: "ROLL #24-04A",
+      image: `${ASSETS_BASE_URL}/portfolio/conceptual/glass-refractions.webp`,
+      camera: "Sony A7 IV // 90mm f/2.8 Macro G OSS",
+      exif: { iso: "100", shutter: "1/80s", aperture: "f/5.6", focal: "90mm" },
+      location: "Natural Light Lab, Semarang",
+      year: "2024",
+      aspect: "aspect-[3/4]",
+      description: "Macro study of afternoon caustics projected through antique ribbed glass bottles onto deckle-edge washi paper sheets.",
+      tags: ["Macro", "Caustics", "Still Life", "Glass Refraction"]
+    },
+    {
+      id: "photo-c2",
+      subCategory: "conceptual",
+      subCategoryLabel: "Conceptual",
+      title: "The Architecture of Silence",
+      seriesTitle: "Shadow Minimal",
+      roll: "ROLL #24-04B",
+      image: `${ASSETS_BASE_URL}/portfolio/conceptual/architecture-silence.webp`,
+      camera: "Leica Q2 // Summilux 28mm f/1.7",
+      exif: { iso: "100", shutter: "1/500s", aperture: "f/4.0", focal: "28mm" },
+      location: "Grand Mosque Pavilion, Semarang",
+      year: "2024",
+      aspect: "aspect-[16/10]",
+      description: "Monochrome architectural study dissecting the interplay of stark geometric shadow lines across white marble colonnades.",
+      tags: ["Architectural", "Monochrome", "Minimalism", "Shadow Play"]
+    },
+    {
+      id: "photo-c3",
+      subCategory: "conceptual",
+      subCategoryLabel: "Conceptual",
+      title: "Botanical Cyanotype // Pressed Flora",
+      seriesTitle: "Alternative Processes",
+      roll: "ROLL #24-04C",
+      image: `${ASSETS_BASE_URL}/portfolio/conceptual/cyanotype-flora.webp`,
+      camera: "Sony A7 IV // 50mm f/1.4 GM",
+      exif: { iso: "100", shutter: "1/200s", aperture: "f/2.8", focal: "50mm" },
+      location: "Campus Darkroom, Semarang",
+      year: "2023",
+      aspect: "aspect-[4/5]",
+      description: "Sun-exposed Prussian blue cyanotype print of wild Semarang mountain ferns, capturing delicate cellular veining under direct midday sunlight.",
+      tags: ["Cyanotype", "Alternative Process", "Prussian Blue", "Pressed Flora"]
+    }
+  ]
 };

@@ -5,6 +5,7 @@ import { FolderTabs } from './components/FolderTabs';
 import { FolderSheet } from './components/FolderSheet';
 import { AboutTab } from './components/tabs/AboutTab';
 import { ProjectGalleryTab } from './components/tabs/ProjectGalleryTab';
+import { PortfolioTab } from './components/tabs/PortfolioTab';
 import { ContactTab } from './components/tabs/ContactTab';
 import { ArchivalImage } from './utils/vectorFallbacks';
 import { soundEngine } from './utils/soundEngine';
@@ -19,7 +20,7 @@ export function App() {
   // Background Piano Audio Hook
   const { isPlaying: isBgmPlaying, toggleBgm } = useBackgroundAudio();
 
-  // Keyboard shortcut listener: 1-6 for tabs, ESC for modal, M for piano BGM
+  // Keyboard shortcut listener: 1-5 for tabs, ESC for modal, M for piano BGM
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) {
@@ -217,19 +218,9 @@ export function App() {
               />
             )}
 
-            {activeTab === 'editorial' && (
-              <ProjectGalleryTab
-                category="editorial"
-                items={PORTFOLIO_DATA.editorial}
-                onShowToast={showToast}
-              />
-            )}
-
-            {activeTab === 'social' && (
-              <ProjectGalleryTab
-                category="social"
-                items={PORTFOLIO_DATA.social.feed}
-                socialData={PORTFOLIO_DATA.social}
+            {activeTab === 'portfolio' && (
+              <PortfolioTab
+                items={PORTFOLIO_DATA.portfolio}
                 onShowToast={showToast}
               />
             )}
