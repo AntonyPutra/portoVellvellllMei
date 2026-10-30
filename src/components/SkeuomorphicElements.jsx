@@ -60,7 +60,7 @@ export function WashiTape({ color = "vanilla", className = "", angle = -4 }) {
       }}
       aria-hidden="true"
     >
-      <span className="opacity-70 font-semibold">DKV // B28</span>
+      <span className="opacity-70 font-semibold">DKV // ARCHIVE</span>
     </div>
   );
 }
@@ -90,9 +90,9 @@ export function RubberStamp({ text = "ARCHIVE VERIFIED", variant = "red", classN
  */
 export function Polaroid({
   image,
-  caption = "Mei — BINUS B28 DKV",
-  subcaption = "studio archives // 2024",
-  rotation = -3,
+  caption = "Vallerie Sharon Wibowo",
+  subcaption = "Visual Communication Student",
+  rotation = -2,
   onClick,
   className = ""
 }) {

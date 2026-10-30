@@ -30,7 +30,7 @@ export function FolderSheet({ activeTab, children }) {
             damping: 28,
             mass: 0.8
           }}
-          className="relative z-10 p-6 md:p-10"
+          className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-10"
         >
           {children}
         </motion.div>

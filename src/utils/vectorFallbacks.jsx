@@ -66,7 +66,7 @@ export const VectorFallbacks = {
           {id ? id.toUpperCase() : "CASE SPECIMEN"}
         </text>
         <text x="300" y="315" fontFamily="monospace" fontSize="9" fill="#FFF3E5" opacity="0.6" textAnchor="middle">
-          BINUS UNIVERSITY B28 ARCHIVE
+          BINUS UNIVERSITY @ SEMARANG
         </text>
       </svg>
     );
@@ -87,7 +87,7 @@ export const VectorFallbacks = {
           {title}
         </text>
         <text x="250" y="355" fontFamily="monospace" fontSize="9" fill="#EAD7B5" textAnchor="middle" letterSpacing="2">
-          MEI // VISUAL RECORD
+          VALLERIE // VISUAL RECORD
         </text>
       </svg>
     );

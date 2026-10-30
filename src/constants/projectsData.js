@@ -1,39 +1,38 @@
 /**
  * Projects Data & Portfolio Configurations
- * Consumes image assets from static server with fallback architecture
+ * Vallerie Sharon Wibowo — Visual Communication Student (BINUS University @ Semarang)
  */
 
-export const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "http://100.73.16.92:8095";
+export const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "/assets-static";
 
 export const PORTFOLIO_DATA = {
   profile: {
-    name: "Mei",
-    university: "BINUS B28",
-    batch: "Binusian 2028 (B28)",
-    major: "Desain Komunikasi Visual",
-    institution: "BINUS University School of Design",
+    name: "Vallerie Sharon Wibowo",
+    headline: "Visual Communication Student",
+    university: "BINUS University @ Semarang",
+    campus: "Binus Semarang",
+    major: "Visual Communication Design (DKV)",
+    institution: "BINUS University @ Semarang // School of Design",
     instagram: "kyuu__rious",
     instagramUrl: "https://www.instagram.com/kyuu__rious",
     avatar: `${ASSETS_BASE_URL}/profile/mei-polaroid.webp`,
-    email: "mei.creative@binus.ac.id",
+    email: "vallerie.creative@binus.ac.id",
     tagline: "Curating ideas into tangible visual narratives.",
-    personalStatement: "Dear little me, everything will be alright. We are making art, crafting stories, and archiving every beautiful fragment along the way.",
-    bio: "Visual communication designer and DKV student at BINUS University with an obsession for tactile nostalgia, modern editorial layouts, and playful brand storytelling. I treat design like an intentional archive—blending physical craft (risograph, bookbinding, paper textures) with sharp digital brand systems.",
+    personalStatement: "If I don’t try, how would I know the outcome?",
+    bio: "Visual Communication Student at BINUS University @ Semarang with a focus on visual storytelling across photography, digital illustration, basic video editing, and social media curation. I approach every creative project with curiosity, meticulous organization, and an experimental mindset.",
+    polaroidCaption: "Vallerie Sharon Wibowo",
+    polaroidSubcaption: "Visual Communication Student",
     disciplines: [
-      "Visual Brand Identity",
-      "Editorial & Bookbinding",
-      "Digital & Riso Illustration",
-      "Packaging Architecture",
-      "Typography Systems",
+      "Photography",
+      "Illustration / Digital Illustration",
+      "Basic Video Editing",
       "Social Media Curation"
     ],
     toolkit: [
-      { name: "Adobe Illustrator", level: "Vector & Identity", code: "Ai" },
-      { name: "Adobe Photoshop", level: "Textures & Mockups", code: "Ps" },
-      { name: "Adobe InDesign", level: "Editorial & Layout", code: "Id" },
-      { name: "Figma", level: "UI Systems & Vector", code: "Fg" },
-      { name: "Procreate", level: "Digital Painting", code: "Pr" },
-      { name: "Risograph & Binding", level: "Analog Printmaking", code: "Rb" }
+      { name: "Procreate", level: "Digital Painting & Illustration", code: "Pr" },
+      { name: "Adobe Lightroom", level: "Color Grading & Photo Editing", code: "Lr" },
+      { name: "Adobe Illustrator", level: "Vector Graphics & Branding", code: "Ai" },
+      { name: "CapCut", level: "Video Editing & Motion", code: "Cc" }
     ]
   },
 
@@ -121,11 +120,11 @@ export const PORTFOLIO_DATA = {
       year: "2024",
       badge: "RISO // 01",
       image: `${ASSETS_BASE_URL}/illustration/pasar-santa.webp`,
-      description: "Nostalgic Jakarta nighttime market scene, vintage vinyl booths, neon signs, and quiet street cats.",
-      tags: ["Risograph", "Jakarta Culture", "3-Color Print", "Vinyl Market"],
+      description: "Nostalgic nighttime market scene, vintage vinyl booths, neon signs, and quiet street cats.",
+      tags: ["Risograph", "Street Culture", "3-Color Print", "Vinyl Market"],
       tapeColor: "plum",
       size: "A3 / 297 × 420 mm",
-      story: "Drawn after late-night digging through vintage cassette stalls in South Jakarta. Printed on 160gsm Munken Lynx paper with intentional slight misregistration to embrace tactile warmth."
+      story: "Drawn after late-night exploration through vintage cassette stalls. Printed on 160gsm Munken Lynx paper with intentional slight misregistration to embrace tactile warmth."
     },
     {
       id: "art-botanical-reverie",
@@ -151,7 +150,7 @@ export const PORTFOLIO_DATA = {
       tags: ["Y2K Nostalgia", "Sticker Sheet", "Holographic", "Vector Scrapbook"],
       tapeColor: "plum",
       size: "A4 Sticker Sheet",
-      story: "A love letter to early millennium tech aesthetics: translucent Game Boy plastics, minidiscs, and pixelated desktop pets. Part of a limited zine insert for DKV showcase."
+      story: "A love letter to early millennium tech aesthetics: translucent Game Boy plastics, minidiscs, and pixelated desktop pets."
     },
     {
       id: "art-tea-guardian",
@@ -173,11 +172,11 @@ export const PORTFOLIO_DATA = {
       year: "2023",
       badge: "TRANSIT // 05",
       image: `${ASSETS_BASE_URL}/illustration/echoes-rain.webp`,
-      description: "Atmospheric rainy commute through the elevated train platform in Jakarta.",
-      tags: ["Cinematic", "Urban Jakarta", "Bokeh", "Atmospheric"],
+      description: "Atmospheric rainy commute through the elevated transit platform.",
+      tags: ["Cinematic", "Urban Solitude", "Bokeh", "Atmospheric"],
       tapeColor: "plum",
       size: "3840 × 2160 px (4K)",
-      story: "Capturing the melancholic serenity of waiting on the transit platform as rain drenches the metropolis. Layers of watercolor washes, wet pavement reflections, and subtle chromatic aberration."
+      story: "Capturing the melancholic serenity of waiting on the platform as rain drenches the city. Layers of watercolor washes, wet pavement reflections, and subtle chromatic aberration."
     },
     {
       id: "art-jajanan-pasar",
@@ -186,11 +185,11 @@ export const PORTFOLIO_DATA = {
       year: "2024",
       badge: "MERCH // 06",
       image: `${ASSETS_BASE_URL}/illustration/jajanan-pasar.webp`,
-      description: "Collectible sticker pack paying homage to Indonesian street treats: Kue Cubit, Martabak, and Es Cendol.",
-      tags: ["Die-Cut", "Indonesian Food", "Vinyl Stickers", "B28 Showcase"],
+      description: "Collectible sticker pack paying homage to traditional street treats: Kue Cubit, Martabak, and Es Cendol.",
+      tags: ["Die-Cut", "Street Food", "Vinyl Stickers", "Design Fair"],
       tapeColor: "vanilla",
       size: "150 × 210 mm Die-Cut Sheet",
-      story: "Designed for BINUS B28 Design Fair. Printed on waterproof holographic vinyl with custom die-cut borders, sold out within the first two hours of the exhibition."
+      story: "Designed for the campus Design Fair. Printed on waterproof holographic vinyl with custom die-cut borders, sold out within the first two hours."
     }
   ],
 
@@ -202,7 +201,7 @@ export const PORTFOLIO_DATA = {
       year: "2024",
       badge: "PUB // 01",
       image: `${ASSETS_BASE_URL}/editorial/hyphen-cover.webp`,
-      description: "64-page indie art & architecture publication exploring transition zones: stairwells, train vestibules, and late-night convenience stores.",
+      description: "64-page indie art & architecture publication exploring transition zones: stairwells, transit vestibules, and late-night convenience stores.",
       tags: ["Zine", "Editorial", "Smyth-Sewn", "French Fold", "Risograph"],
       specs: "A5 Format // 64 Pages // Munken Pure 120gsm // Exposed Smyth-Sewn Spine",
       role: "Editor-in-Chief, Lead Typographer, & Bookbinder",
@@ -229,7 +228,7 @@ export const PORTFOLIO_DATA = {
           label: "Spread 04: Colophon & Specimen Index",
           image: `${ASSETS_BASE_URL}/editorial/hyphen-spread-4.webp`,
           caption: "Archival grid layout detailing typography licensing, paper weights, and production colophon.",
-          quote: "Printed at BINUS DKV Print Lab on Munken Pure 120gsm."
+          quote: "Printed at Campus Print Lab on Munken Pure 120gsm."
         }
       ]
     },
@@ -260,7 +259,7 @@ export const PORTFOLIO_DATA = {
       year: "2023",
       badge: "PUB // 03",
       image: `${ASSETS_BASE_URL}/editorial/solivagant-cover.webp`,
-      description: "Pocket-sized anthology of Indonesian and English free-verse poems written during long commuter train rides.",
+      description: "Pocket-sized anthology of free-verse poems written during long commuter train rides.",
       tags: ["Poetry", "Bookbinding", "Gold Foil Stamping", "Bookcloth"],
       specs: "120 × 180 mm Pocket Edition // 80 Pages // Plum Bookcloth Hardcover with Gold Foil",
       role: "Bookbinder, Cover Designer, & Typesetter",
@@ -277,7 +276,7 @@ export const PORTFOLIO_DATA = {
 
   social: {
     campaign: {
-      title: "METAMORPHOSIS // BINUS DKV B28 Annual Showcase",
+      title: "METAMORPHOSIS // Annual Design Showcase",
       role: "Visual Identity Lead & Social Media Strategist",
       year: "2024",
       badge: "EXHIBITION // 2024",
@@ -289,7 +288,7 @@ export const PORTFOLIO_DATA = {
     feed: [
       {
         id: "feed-1",
-        caption: "Late studio nights at BINUS Anggrek campus ✨ Developing new riso test sheets for the upcoming zine issue. @kyuu__rious",
+        caption: "Late studio nights at campus ✨ Developing new riso test sheets for the upcoming zine issue. @kyuu__rious",
         likes: "428",
         comments: "32",
         type: "Studio BTS",
@@ -297,7 +296,7 @@ export const PORTFOLIO_DATA = {
       },
       {
         id: "feed-2",
-        caption: "Color swatches for Kitsune Botanicals. Deep plum and matcha tones make the heart happy 🍵 #brandidentity #dkv #binus28",
+        caption: "Color swatches for Kitsune Botanicals. Deep plum and matcha tones make the heart happy 🍵 #photography #illustration #binussemarang",
         likes: "612",
         comments: "45",
         type: "Color Study",
@@ -345,7 +344,7 @@ export const PORTFOLIO_DATA = {
       },
       {
         id: "feed-8",
-        caption: "Key visual exploratory poster for BINUS DKV B28 Showcase 'METAMORPHOSIS' 🦋",
+        caption: "Key visual exploratory poster for Campus Showcase 'METAMORPHOSIS' 🦋",
         likes: "1,340",
         comments: "118",
         type: "Event Key Visual",
@@ -362,4 +361,3 @@ export const PORTFOLIO_DATA = {
     ]
   }
 };
-

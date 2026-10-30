@@ -54,7 +54,7 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
         </div>
 
         <div className="font-mono text-xs text-[#37192C] bg-[#FFF3E5] px-3.5 py-2 rounded-md border border-[#EAD7B5]">
-          <span>FORM DKV-B28</span>
+          <span>FORM DKV-SMG</span>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
           <div className="flex justify-between items-start pb-4 mb-6 border-b-2 border-[#37192C]">
             <div>
               <span className="font-mono text-xs text-[#B33939] font-bold tracking-wider">
-                MEMORANDUM NO. B28-0429
+                MEMORANDUM NO. DKV-SMG-01
               </span>
               <h3 className="font-display text-2xl font-extrabold text-[#37192C]">
                 Creative Requisition Slip
@@ -218,7 +218,7 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
               <span>INSTAGRAM CURATION</span>
             </div>
             <p className="text-xs text-[#6B5B65] leading-relaxed">
-              Follow Mei's visual diary, BTS risograph test prints, cafe sketchbook studies, and design explorations.
+              Follow Vallerie's visual diary, photography studies, and creative explorations.
             </p>
             <a
               href={profile.instagramUrl}
@@ -238,9 +238,9 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
               <span>STUDIO BASE // LOCATION</span>
             </div>
             <p className="text-xs text-[#6B5B65] leading-relaxed">
-              School of Design (DKV)<br />
-              BINUS University, Anggrek Campus<br />
-              West Jakarta, Indonesia
+              Visual Communication Design<br />
+              BINUS University @ Semarang<br />
+              Central Java, Indonesia
             </p>
           </div>
         </div>

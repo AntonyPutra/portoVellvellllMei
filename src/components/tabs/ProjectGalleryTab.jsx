@@ -19,26 +19,26 @@ export function ProjectGalleryTab({ category, items, socialData, onShowToast }) 
   return (
     <div>
       {/* Category Header */}
-      <div className="flex flex-wrap justify-between items-end gap-4 pb-6 mb-8 border-b-2 border-dashed border-[#37192C]/15">
+      <div className="flex flex-wrap justify-between items-end gap-3 sm:gap-4 pb-5 sm:pb-6 mb-6 sm:mb-8 border-b-2 border-dashed border-[#37192C]/15">
         <div>
-          <div className="font-mono text-xs tracking-widest text-[#B33939] font-bold uppercase mb-1">
+          <div className="font-mono text-[10px] sm:text-xs tracking-widest text-[#B33939] font-bold uppercase mb-1">
             RECORD CLASSIFICATION // {category.toUpperCase()}
           </div>
-          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-[#37192C] tracking-tight capitalize">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#37192C] tracking-tight capitalize">
             {category === 'branding' && 'Brand Identity & Packaging Architecture'}
             {category === 'illustration' && 'Artwork & Visual Scrapbook'}
             {category === 'editorial' && 'Editorial Design & Zine Spreads'}
             {category === 'social' && 'Social Media & Event Exhibition Curation'}
           </h2>
-          <p className="font-editorial text-lg italic text-[#6B5B65] mt-1">
+          <p className="font-editorial text-base sm:text-lg italic text-[#6B5B65] mt-0.5 sm:mt-1">
             {category === 'branding' && 'Holistic visual identities, packaging mockups, and typography systems.'}
-            {category === 'illustration' && 'Risograph test prints, character designs, and nostalgic sticker sheets.'}
+            {category === 'illustration' && 'Photography, digital illustration, and nostalgic graphic explorations.'}
             {category === 'editorial' && 'French-fold zines, book jackets, and editorial type specimens.'}
             {category === 'social' && 'Campaign rollouts, event identities, and curated visual diary feeds.'}
           </p>
         </div>
 
-        <div className="flex items-center gap-2 font-mono text-xs text-[#37192C] bg-[#FFF3E5] px-3.5 py-2 rounded-md border border-[#EAD7B5]">
+        <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs text-[#37192C] bg-[#FFF3E5] px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-md border border-[#EAD7B5]">
           <span className="font-bold">
             {category === 'social' ? '9 FEED POSTS + 1 CAMPAIGN' : `${items.length} ACTIVE CASE FILES`}
           </span>
@@ -309,7 +309,7 @@ export function ProjectGalleryTab({ category, items, socialData, onShowToast }) 
                     kyuu__rious
                   </h4>
                   <p className="font-mono text-xs text-[#6B5B65]">
-                    Mei • DKV BINUS B28 • 9 Posts • 2,480 Followers
+                    Vallerie • BINUS Semarang • 9 Posts • 2,480 Followers
                   </p>
                 </div>
               </div>
@@ -473,7 +473,7 @@ export function ProjectGalleryTab({ category, items, socialData, onShowToast }) 
                 <span className="font-mono text-xs text-[#6B5B65]">
                   {selectedItem.typography ? `Typography: ${selectedItem.typography}` : `Catalog ID: DKV-${selectedItem.id.toUpperCase()}`}
                 </span>
-                <RubberStamp text="ARCHIVE VERIFIED // B28" variant="gold" angle={-3} className="text-[10px]" />
+                <RubberStamp text="BINUS SEMARANG // VERIFIED" variant="gold" angle={-3} className="text-[10px]" />
               </div>
             </motion.div>
           </div>

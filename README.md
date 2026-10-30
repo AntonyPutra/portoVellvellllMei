@@ -1,8 +1,8 @@
-# 📂 Mei's Archival File Folder Portfolio // BINUS B28 DKV
+# 📂 Vallerie Sharon Wibowo — Archival Portfolio // BINUS Semarang
 
-An interactive, production-ready, highly aesthetic skeuomorphic **"Archival File Folder & Scrapbook"** portfolio web application built with **React, Vite, Tailwind CSS, Lucide React, and Framer Motion** for **Mei**, a Visual Communication Design (DKV / Desain Komunikasi Visual) student at **BINUS University (Binusian 28 / B28)**.
+An interactive, production-ready, highly aesthetic skeuomorphic **"Archival File Folder & Scrapbook"** portfolio web application built with **React, Vite, Tailwind CSS, Lucide React, and Framer Motion** for **Vallerie Sharon Wibowo**, a Visual Communication Student at **BINUS University @ Semarang (Binus Semarang)**.
 
-> **“Curating ideas into tangible visual narratives.”**  
+> **“If I don’t try, how would I know the outcome?”**  
 > *Instagram:* [@kyuu__rious](https://www.instagram.com/kyuu__rious)
 
 ---
@@ -13,9 +13,9 @@ An interactive, production-ready, highly aesthetic skeuomorphic **"Archival File
 - **Styling**: Tailwind CSS with custom skeuomorphic color tokens & drop shadows
 - **Motion & Physics**: Framer Motion (spring physics for folder opening, tab transitions, and 3D hover effects)
 - **Icons**: Lucide React
-- **Asset Architecture**: Decoupled static asset pipeline consuming images from a centralized static server:
+- **Asset Architecture**: Decoupled static asset pipeline consuming images from a centralized static server or local mount:
   ```javascript
-  const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "http://100.73.16.92:8095";
+  export const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "/assets-static";
   ```
 - **Error Handling**: Graceful SVG vector fallbacks (`ArchivalImage`) so the portfolio renders flawlessly even if the asset server is offline or unreachable.
 
