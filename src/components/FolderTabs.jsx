@@ -53,3 +53,4 @@ export function FolderTabs({ tabs, activeTab, onSelectTab }) {
     </nav>
   );
 }
+

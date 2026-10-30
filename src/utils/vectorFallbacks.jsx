@@ -124,3 +124,4 @@ export function ArchivalImage({ src, alt, fallbackType = "generic", className = 
     </div>
   );
 }
+

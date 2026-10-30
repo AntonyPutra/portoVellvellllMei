@@ -482,3 +482,4 @@ export function ProjectGalleryTab({ category, items, socialData, onShowToast }) 
     </div>
   );
 }
+

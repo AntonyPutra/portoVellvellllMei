@@ -163,3 +163,4 @@ export function AboutTab({ profile, onOpenPolaroid }) {
     </div>
   );
 }
+

@@ -135,3 +135,4 @@ export function Polaroid({
     </motion.div>
   );
 }
+

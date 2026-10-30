@@ -248,3 +248,4 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
     </div>
   );
 }
+
