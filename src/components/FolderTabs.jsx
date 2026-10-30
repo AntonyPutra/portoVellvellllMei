@@ -14,10 +14,15 @@ export function FolderTabs({ tabs, activeTab, onSelectTab }) {
   }, [activeTab]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full overflow-hidden">
+      {/* Subtle edge fade indicator for horizontal scroll on mobile */}
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-3 z-30 bg-gradient-to-r from-[#2E1626]/40 to-transparent sm:hidden" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-3 z-30 bg-gradient-to-l from-[#2E1626]/40 to-transparent sm:hidden" />
+
       <nav
         ref={tabsContainerRef}
-        className="flex items-end gap-1 sm:gap-1.5 px-2 sm:px-3 relative z-10 overflow-x-auto scroll-smooth touch-pan-x scrollbar-none pb-0 -mb-[1px]"
+        className="flex items-end gap-1 sm:gap-1.5 px-1 sm:px-3 relative z-10 overflow-x-auto scroll-smooth touch-pan-x scrollbar-none pb-0 -mb-[1px] w-full max-w-full"
+        style={{ WebkitOverflowScrolling: 'touch' }}
         role="tablist"
         aria-label="Archive Folder Drawers"
       >
@@ -31,7 +36,7 @@ export function FolderTabs({ tabs, activeTab, onSelectTab }) {
               role="tab"
               aria-selected={isActive}
               aria-controls={`panel-${tab.id}`}
-              className={`group relative flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-t-lg sm:rounded-t-xl font-mono text-[11px] sm:text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-colors duration-200 focus:outline-none flex-shrink-0 border-t border-l border-r border-[#37192C]/15 select-none ${
+              className={`group relative flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-t-lg sm:rounded-t-xl font-mono text-[10px] sm:text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-colors duration-200 focus:outline-none flex-shrink-0 border-t border-l border-r border-[#37192C]/15 select-none ${
                 isActive
                   ? 'bg-[#FDFBF7] text-[#37192C] z-20 shadow-[-2px_-4px_12px_rgba(55,25,44,0.12)]'
                   : 'bg-[#EAD7B5] hover:bg-[#FFF3E5] text-[#37192C]/80 z-0'

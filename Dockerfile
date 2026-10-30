@@ -26,9 +26,11 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Create directory for mounted user assets volume
 RUN mkdir -p /var/www/assets
 
+# Copy uploaded assets if present in build context as fallback
+COPY uploaded-assets/ /var/www/assets/
+
 # Expose HTTP port
 EXPOSE 80
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
-

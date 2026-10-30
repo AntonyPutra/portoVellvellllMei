@@ -7,17 +7,17 @@ import { ArchivalImage } from '../utils/vectorFallbacks';
  */
 export function Paperclip({ className = "", position = "top-left" }) {
   const positionClasses = {
-    "top-left": "-top-4 left-6",
-    "top-right": "-top-4 right-6",
-    "top-center": "-top-5 left-1/2 -translate-x-1/2"
+    "top-left": "-top-3 sm:-top-4 left-4 sm:left-6",
+    "top-right": "-top-3 sm:-top-4 right-4 sm:right-6",
+    "top-center": "-top-4 sm:-top-5 left-1/2 -translate-x-1/2"
   };
 
   return (
     <div
-      className={`absolute z-30 pointer-events-none drop-shadow-[1px_3px_4px_rgba(55,25,44,0.3)] ${positionClasses[position] || position} ${className}`}
+      className={`absolute z-30 pointer-events-none drop-shadow-[1px_2px_3px_rgba(55,25,44,0.25)] ${positionClasses[position] || position} ${className}`}
       aria-hidden="true"
     >
-      <svg width="22" height="54" viewBox="0 0 22 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="20" height="48" viewBox="0 0 22 54" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-10 sm:w-5 sm:h-12">
         <defs>
           <linearGradient id="clipMetal" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#FFF3E5" />
@@ -45,22 +45,22 @@ export function Paperclip({ className = "", position = "top-left" }) {
  */
 export function WashiTape({ color = "vanilla", className = "", angle = -4 }) {
   const colorStyles = {
-    vanilla: "bg-[#EAD7B5]/80 text-[#37192C]",
-    plum: "bg-[#37192C]/80 text-[#FFF3E5]",
-    gold: "bg-[#D4AF37]/80 text-[#37192C]",
-    kraft: "bg-[#CBB493]/85 text-[#24101D]"
+    vanilla: "bg-[#EAD7B5]/85 text-[#37192C]",
+    plum: "bg-[#37192C]/85 text-[#FFF3E5]",
+    gold: "bg-[#D4AF37]/85 text-[#37192C]",
+    kraft: "bg-[#CBB493]/90 text-[#24101D]"
   };
 
   return (
     <div
-      className={`absolute z-20 h-6 px-4 flex items-center justify-center font-mono text-[9px] uppercase tracking-wider backdrop-blur-[1px] shadow-[0_1px_3px_rgba(55,25,44,0.15)] pointer-events-none select-none ${colorStyles[color] || colorStyles.vanilla} ${className}`}
+      className={`absolute z-20 h-5 sm:h-6 px-2.5 sm:px-4 flex items-center justify-center font-mono text-[8px] sm:text-[9px] uppercase tracking-wider backdrop-blur-[1px] shadow-[0_1px_3px_rgba(55,25,44,0.15)] pointer-events-none select-none max-w-full ${colorStyles[color] || colorStyles.vanilla} ${className}`}
       style={{
         transform: `rotate(${angle}deg)`,
         backgroundImage: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 6px, transparent 6px, transparent 12px)'
       }}
       aria-hidden="true"
     >
-      <span className="opacity-70 font-semibold">DKV // ARCHIVE</span>
+      <span className="opacity-75 font-semibold truncate">DKV // ARCHIVE</span>
     </div>
   );
 }
@@ -68,7 +68,7 @@ export function WashiTape({ color = "vanilla", className = "", angle = -4 }) {
 /**
  * Distressed Rubber Ink Stamp
  */
-export function RubberStamp({ text = "ARCHIVE VERIFIED", variant = "red", className = "", angle = -8 }) {
+export function RubberStamp({ text = "ARCHIVE VERIFIED", variant = "red", className = "", angle = -6 }) {
   const variants = {
     red: "border-[#B33939] text-[#B33939]",
     gold: "border-[#D4AF37] text-[#D4AF37]",
@@ -77,7 +77,7 @@ export function RubberStamp({ text = "ARCHIVE VERIFIED", variant = "red", classN
 
   return (
     <div
-      className={`inline-block px-3 py-1 border-2 border-dashed rounded font-mono text-xs font-black uppercase tracking-widest pointer-events-none select-none opacity-85 ${variants[variant] || variants.red} ${className}`}
+      className={`inline-block px-2 sm:px-3 py-0.5 sm:py-1 border border-dashed sm:border-2 rounded font-mono text-[9px] sm:text-xs font-black uppercase tracking-wider sm:tracking-widest pointer-events-none select-none opacity-90 max-w-full truncate ${variants[variant] || variants.red} ${className}`}
       style={{ transform: `rotate(${angle}deg)` }}
     >
       {text}
@@ -92,19 +92,19 @@ export function Polaroid({
   image,
   caption = "Vallerie Sharon Wibowo",
   subcaption = "Visual Communication Student",
-  rotation = -2,
+  rotation = -1,
   onClick,
   className = ""
 }) {
   return (
     <motion.div
-      className={`relative bg-[#FFFFFF] p-3 pb-5 rounded-[2px] shadow-[0_10px_25px_rgba(55,25,44,0.18)] cursor-pointer border border-[#37192C]/10 ${className}`}
+      className={`relative bg-[#FFFFFF] p-2.5 sm:p-3.5 pb-4 sm:pb-5 rounded-[2px] shadow-[0_8px_20px_rgba(55,25,44,0.14)] cursor-pointer border border-[#37192C]/10 w-full max-w-[270px] sm:max-w-[300px] mx-auto select-none ${className}`}
       style={{ transform: `rotate(${rotation}deg)` }}
       whileHover={{
         rotate: 0,
-        scale: 1.03,
-        y: -4,
-        boxShadow: "0 20px 35px rgba(55, 25, 44, 0.22)",
+        scale: 1.02,
+        y: -3,
+        boxShadow: "0 16px 30px rgba(55, 25, 44, 0.2)",
         transition: { type: "spring", stiffness: 300, damping: 20 }
       }}
       onClick={onClick}
@@ -113,7 +113,7 @@ export function Polaroid({
       <Paperclip position="top-left" />
 
       {/* Washi tape on opposite corner */}
-      <WashiTape color="gold" className="-top-3 right-4 w-16" angle={6} />
+      <WashiTape color="gold" className="-top-2.5 sm:-top-3 right-3 sm:right-4 w-14 sm:w-16" angle={4} />
 
       {/* Photo viewport */}
       <div className="w-full aspect-[1/1.12] bg-[#1C0E17] rounded-[1px] overflow-hidden relative shadow-inner">
@@ -128,11 +128,10 @@ export function Polaroid({
       </div>
 
       {/* Polaroid handwritten caption footer */}
-      <div className="mt-3 text-center">
-        <p className="font-hand text-xl text-[#37192C] leading-tight">{caption}</p>
-        <p className="font-mono text-[9px] uppercase tracking-wider text-[#6B5B65] mt-1">{subcaption}</p>
+      <div className="mt-2.5 sm:mt-3 text-center px-1">
+        <p className="font-hand text-lg sm:text-xl text-[#37192C] leading-tight truncate">{caption}</p>
+        <p className="font-mono text-[8px] sm:text-[9px] uppercase tracking-wider text-[#6B5B65] mt-0.5 truncate">{subcaption}</p>
       </div>
     </motion.div>
   );
 }
-
