@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Copy, Check, Instagram, ArrowUpRight, Mail, MapPin } from 'lucide-react';
+import { Send, Copy, Check, Instagram, ArrowUpRight, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { WashiTape, RubberStamp, Paperclip } from '../SkeuomorphicElements';
 
 export function ContactTab({ profile, onShowToast, onPlaySound }) {
@@ -43,13 +43,13 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 pb-4 sm:pb-6 mb-5 sm:mb-8 border-b-2 border-dashed border-[#37192C]/15">
         <div className="min-w-0">
           <div className="font-mono text-[9px] sm:text-xs tracking-widest text-[#B33939] font-bold uppercase mb-1">
-            RECORD NO. 06 // OFFICIAL DISPATCH & INQUIRY MEMO
+            RECORD NO. 05 // OFFICIAL DISPATCH & INQUIRY MEMO
           </div>
           <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-[#37192C] tracking-tight leading-tight">
-            Archive Requisition / Get In Touch
+            get in touch
           </h2>
           <p className="font-editorial text-sm sm:text-base md:text-lg italic text-[#6B5B65] mt-0.5 sm:mt-1">
-            File an archival requisition memo for branding projects, editorial commissions, or creative collaborations.
+            Send an inquiry memo for photography projects, illustration, or creative collaborations.
           </p>
         </div>
 
@@ -181,7 +181,7 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
               type="submit"
               className="mt-1 inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 bg-[#37192C] text-[#FFF3E5] rounded-lg font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#4D253F] transition-all shadow-[0_4px_12px_rgba(55,25,44,0.2)] active:scale-[0.99]"
             >
-              <span>DISPATCH MEMO TO ARCHIVE</span>
+              <span>send</span>
               <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
           </form>
@@ -189,11 +189,34 @@ export function ContactTab({ profile, onShowToast, onPlaySound }) {
 
         {/* Side Column: Quick Actions */}
         <div className="flex flex-col gap-4 sm:gap-5">
+          {/* Direct WhatsApp Card */}
+          <div className="bg-[#FFF3E5] border border-[#D4BD99] rounded-xl p-4 sm:p-5 shadow-[0_2px_8px_rgba(55,25,44,0.06)] flex flex-col gap-2.5 sm:gap-3">
+            <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs font-bold text-[#37192C] uppercase tracking-wider">
+              <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+              <span>WHATSAPP MESSENGER</span>
+            </div>
+            <div className="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-2 bg-[#FFFFFF] p-2 sm:p-2.5 px-3 rounded-md border border-[#EAD7B5]">
+              <span className="font-mono text-xs text-[#37192C] truncate font-semibold">+62 822 2513 3107</span>
+              <a
+                href="https://wa.me/6282225133107"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[10px] sm:text-[11px] font-bold text-[#37192C] bg-[#FFF3E5] hover:bg-[#37192C] hover:text-[#FFF3E5] px-2.5 py-1 rounded border border-[#D4BD99] transition-colors inline-flex items-center justify-center gap-1 self-end xs:self-auto flex-shrink-0"
+              >
+                <span>CHAT</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+            <p className="text-xs text-[#6B5B65] leading-relaxed">
+              Direct line for quick inquiries, creative discussions, and project consultation.
+            </p>
+          </div>
+
           {/* Direct Email Card */}
           <div className="bg-[#FFF3E5] border border-[#D4BD99] rounded-xl p-4 sm:p-5 shadow-[0_2px_8px_rgba(55,25,44,0.06)] flex flex-col gap-2.5 sm:gap-3">
             <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs font-bold text-[#37192C] uppercase tracking-wider">
               <Mail className="w-3.5 h-3.5" />
-              <span>DIRECT CAMPUS EMAIL</span>
+              <span>DIRECT EMAIL</span>
             </div>
             <div className="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-2 bg-[#FFFFFF] p-2 sm:p-2.5 px-3 rounded-md border border-[#EAD7B5]">
               <span className="font-mono text-xs text-[#37192C] truncate select-all">{profile.email}</span>

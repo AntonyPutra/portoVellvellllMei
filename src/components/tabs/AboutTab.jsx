@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, ArrowUpRight, Compass, Terminal } from 'lucide-react';
+import { Compass, Terminal } from 'lucide-react';
 import { Polaroid, Paperclip, WashiTape, RubberStamp } from '../SkeuomorphicElements';
 
 export function AboutTab({ profile, onOpenPolaroid }) {
@@ -15,11 +15,8 @@ export function AboutTab({ profile, onOpenPolaroid }) {
             <span>OFFICIAL PROFILE DOSSIER</span>
           </div>
           <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-[#37192C] tracking-tight leading-tight">
-            Student Profile & Philosophy
+            Introduction profile
           </h2>
-          <p className="font-editorial text-sm sm:text-base md:text-lg italic text-[#6B5B65] mt-0.5 sm:mt-1">
-            “{profile.tagline}”
-          </p>
         </div>
 
         <div className="flex items-center gap-2 font-mono text-[10px] sm:text-xs text-[#37192C] bg-[#FFF3E5] px-2.5 py-1 sm:px-3.5 sm:py-2 rounded-md border border-[#EAD7B5] self-start sm:self-auto flex-shrink-0">
@@ -145,24 +142,14 @@ export function AboutTab({ profile, onOpenPolaroid }) {
             </div>
           </div>
 
-          {/* Sticky Note Callout & Direct Links */}
+          {/* Sticky Note Callout */}
           <div className="relative bg-[#FFF9D2] p-3.5 sm:p-5 rounded-[2px_2px_14px_2px] shadow-[0_4px_12px_rgba(55,25,44,0.08)] border border-[#D4AF37]/30">
             <WashiTape color="plum" className="-top-2 left-4 sm:left-6 w-14 sm:w-16" angle={-2} />
-            <p className="font-hand text-base sm:text-lg md:text-xl text-[#3B2406] leading-relaxed mb-3 pt-1">
+            <p className="font-sans text-xs sm:text-sm text-[#37192C] leading-relaxed mb-3 pt-1">
               Currently open for photography projects, digital illustration, video editing, and creative collaborations! Let's create something memorable ✨
             </p>
-            <div className="flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2.5 pt-2 border-t border-[#3B2406]/15">
-              <a
-                href={profile.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#37192C] text-[#FFF3E5] rounded-md font-mono text-xs font-bold hover:bg-[#4D253F] transition-colors"
-              >
-                <Instagram className="w-3.5 h-3.5" />
-                <span>@{profile.instagram}</span>
-                <ArrowUpRight className="w-3 h-3" />
-              </a>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#3B2406]/75">BINUS UNIVERSITY @ SEMARANG</span>
+            <div className="flex items-center justify-between pt-2 border-t border-[#3B2406]/15">
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#3B2406]/75 uppercase tracking-wider">BINUS UNIVERSITY @ SEMARANG // SCHOOL OF DESIGN</span>
             </div>
           </div>
         </div>

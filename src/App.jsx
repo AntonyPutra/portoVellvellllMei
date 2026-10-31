@@ -4,6 +4,7 @@ import { PORTFOLIO_DATA } from './constants/projectsData';
 import { FolderTabs } from './components/FolderTabs';
 import { FolderSheet } from './components/FolderSheet';
 import { AboutTab } from './components/tabs/AboutTab';
+import { ProfileInfoTab } from './components/tabs/ProfileInfoTab';
 import { ProjectGalleryTab } from './components/tabs/ProjectGalleryTab';
 import { PortfolioTab } from './components/tabs/PortfolioTab';
 import { ContactTab } from './components/tabs/ContactTab';
@@ -120,7 +121,7 @@ export function App() {
                 DOSSIER // VALLERIE SHARON WIBOWO
               </span>
               <h1 className="font-display text-sm sm:text-base md:text-lg font-bold text-[#37192C] leading-tight truncate">
-                Visual Communication Portfolio
+                Visual Communication Design
               </h1>
             </div>
           </div>
@@ -136,12 +137,12 @@ export function App() {
                   ? 'bg-[#37192C] text-[#FFF3E5] border border-[#37192C] shadow-[0_0_12px_rgba(55,25,44,0.35)]'
                   : 'bg-[#FDFBF7] hover:bg-[#FFFFFF] text-[#6B5B65] border border-[#D4BD99]'
               }`}
-              title={isBgmPlaying ? "Pause Piano BGM (Press M)" : "Play Piano BGM (Press M)"}
+              title={isBgmPlaying ? "Pause Audio (Press M)" : "Play Audio (Press M)"}
             >
               {isBgmPlaying ? (
                 <>
                   <Volume2 className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
-                  <span>Piano BGM</span>
+                  <span>sound on/off</span>
                   {/* Animated 3-bar mini equalizer indicator */}
                   <div className="flex items-end gap-[2px] h-3 w-2.5 ml-0.5 flex-shrink-0" aria-hidden="true">
                     <span className="w-[2px] bg-[#D4AF37] rounded-full animate-[pulse_0.6s_ease-in-out_infinite] h-2" />
@@ -152,7 +153,7 @@ export function App() {
               ) : (
                 <>
                   <VolumeX className="w-3.5 h-3.5 text-[#6B5B65] flex-shrink-0" />
-                  <span>Piano BGM</span>
+                  <span>sound on/off</span>
                 </>
               )}
             </button>
@@ -176,7 +177,7 @@ export function App() {
               className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 bg-[#37192C] hover:bg-[#4D253F] text-[#FFF3E5] rounded-md font-mono text-[10px] sm:text-xs font-bold transition-all hover:-translate-y-0.5 shadow-sm flex-shrink-0"
             >
               <Instagram className="w-3.5 h-3.5" />
-              <span>@{PORTFOLIO_DATA.profile.instagram}</span>
+              <span>curious__alien</span>
               <ArrowUpRight className="w-3 h-3" />
             </a>
           </div>
@@ -200,6 +201,10 @@ export function App() {
                 profile={PORTFOLIO_DATA.profile}
                 onOpenPolaroid={() => setIsPolaroidModalOpen(true)}
               />
+            )}
+
+            {activeTab === 'profile' && (
+              <ProfileInfoTab profile={PORTFOLIO_DATA.profile} />
             )}
 
             {activeTab === 'branding' && (

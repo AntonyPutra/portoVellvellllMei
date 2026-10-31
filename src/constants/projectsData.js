@@ -404,11 +404,13 @@ export const PORTFOLIO_DATA = {
     campus: "Binus Semarang",
     major: "Visual Communication Design (DKV)",
     institution: "BINUS University @ Semarang // School of Design",
-    instagram: "kyuu__rious",
-    instagramUrl: "https://www.instagram.com/kyuu__rious",
+    instagram: "curious__alien",
+    instagramUrl: "https://www.instagram.com/curious__alien",
     avatar: `${ASSETS_BASE_URL}/profile/mei-polaroid.webp`,
-    email: "vallerie.creative@binus.ac.id",
-    tagline: "Curating ideas into tangible visual narratives.",
+    email: "valleriesharon02@gmail.com",
+    whatsapp: "+62 822 2513 3107",
+    whatsappUrl: "https://wa.me/6282225133107",
+    tagline: "",
     personalStatement: "If I don’t try, how would I know the outcome?",
     bio: "Visual Communication Student at BINUS University @ Semarang with a focus on visual storytelling across photography, digital illustration, basic video editing, and social media curation. I approach every creative project with curiosity, meticulous organization, and an experimental mindset.",
     polaroidCaption: "Vallerie Sharon Wibowo",
@@ -428,11 +430,11 @@ export const PORTFOLIO_DATA = {
   },
 
   tabs: [
-    { id: "about", label: "INDEX // ABOUT ME", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "01" },
-    { id: "branding", label: "BRANDING", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "02" },
-    { id: "illustration", label: "ILLUSTRATION", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "03" },
-    { id: "portfolio", label: "PORTFOLIO", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "04" },
-    { id: "contact", label: "CONTACT // MEMO", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "05" }
+    { id: "about", label: "01 Intro", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "01" },
+    { id: "profile", label: "02 Profile", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "02" },
+    { id: "illustration", label: "03 Illustration", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "03" },
+    { id: "portfolio", label: "04 Portfolio", tabColor: "bg-[#37192C] text-[#FFF3E5]", num: "04" },
+    { id: "contact", label: "05 Contact", tabColor: "bg-[#FFF3E5] text-[#37192C]", num: "05" }
   ],
 
   branding: [

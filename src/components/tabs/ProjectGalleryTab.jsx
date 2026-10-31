@@ -25,11 +25,11 @@ export function ProjectGalleryTab({ category, items, onShowToast }) {
           </div>
           <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-[#37192C] tracking-tight capitalize leading-tight">
             {category === 'branding' && 'Brand Identity & Packaging Architecture'}
-            {category === 'illustration' && 'Artwork & Visual Scrapbook'}
+            {category === 'illustration' && 'Illustration and designs'}
           </h2>
           <p className="font-editorial text-sm sm:text-base md:text-lg italic text-[#6B5B65] mt-0.5 sm:mt-1">
             {category === 'branding' && 'Holistic visual identities, packaging mockups, and typography systems.'}
-            {category === 'illustration' && 'Photography, digital illustration, and nostalgic graphic explorations.'}
+            {category === 'illustration' && 'Digital illustration, vector art, and nostalgic graphic explorations.'}
           </p>
         </div>
 
@@ -162,8 +162,8 @@ export function ProjectGalleryTab({ category, items, onShowToast }) {
                 </div>
 
                 <p className="font-editorial text-xs italic text-[#6B5B65] mb-1.5">{art.medium}</p>
-                <p className="font-hand text-sm sm:text-base text-[#D86B43] leading-snug line-clamp-2">
-                  “{art.description}”
+                <p className="font-sans text-xs text-[#6B5B65] leading-relaxed line-clamp-2">
+                  {art.description}
                 </p>
               </motion.article>
             );

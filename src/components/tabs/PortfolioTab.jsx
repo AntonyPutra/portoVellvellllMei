@@ -90,7 +90,7 @@ export function PortfolioTab({ projects = [], items = [], onShowToast }) {
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 font-mono text-[10px] sm:text-xs text-[#37192C] bg-[#FFF3E5] px-2.5 py-1 sm:px-3.5 sm:py-2 rounded-md border border-[#EAD7B5] self-start sm:self-auto flex-shrink-0">
+              <div className="flex items-center gap-2 font-mono text-[10px] sm:text-xs text-[#37192C] bg-[#FFF3E5] px-2.5 py-1 sm:px-3.5 sm:py-2 rounded-md border border-[#EAD7B5] self-start sm:self-auto sm:-translate-y-2 flex-shrink-0">
                 <span className="font-bold">{projectList.length} ALBUM SERIES</span>
                 <span>•</span>
                 <span>INSPECTION READY</span>
@@ -100,9 +100,6 @@ export function PortfolioTab({ projects = [], items = [], onShowToast }) {
             {/* Album Collection Grid (Level 1) */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
               {projectList.map((project, idx) => {
-                const tapeColors = ["gold", "plum", "kraft", "vanilla"];
-                const tapeColor = tapeColors[idx % tapeColors.length];
-
                 return (
                   <motion.article
                     key={project.id}
@@ -111,12 +108,6 @@ export function PortfolioTab({ projects = [], items = [], onShowToast }) {
                     onClick={() => handleOpenProject(project)}
                     className="group relative bg-[#FFFFFF] rounded-xl border border-[#EAD7B5] p-4 sm:p-5 shadow-[0_2px_8px_rgba(55,25,44,0.06)] hover:shadow-[0_16px_36px_rgba(55,25,44,0.14)] hover:border-[#37192C] transition-all flex flex-col justify-between cursor-pointer"
                   >
-                    <WashiTape
-                      color={tapeColor}
-                      className={idx % 2 === 0 ? "-top-2.5 right-6 w-16 sm:w-20" : "-top-2.5 left-6 w-16 sm:w-20"}
-                      angle={idx % 2 === 0 ? 3 : -3}
-                    />
-
                     <div>
                       {/* Top Header Badge Row */}
                       <div className="flex justify-between items-center mb-3">
