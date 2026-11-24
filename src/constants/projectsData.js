@@ -10,6 +10,164 @@ export const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "/assets-
 // =========================================================================
 export const portfolioProjects = [
   {
+    id: "holiday-skz",
+    title: "Holiday (SKZ Inspired Series)",
+    category: "Conceptual Photography",
+    date: "November 2024",
+    client: "Personal Creative Project",
+    location: "Studio & Urban Set",
+    gear: "Fujifilm X Series",
+    badge: "Conceptual // 6 Photos",
+    description: "Proyek fotografi personal terinspirasi estetika visual Holiday Stray Kids, menggabungkan pencahayaan kontras, nuansa nostalgia, dan gestur ekspresif.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/holiday/cover.jpg`,
+    photos: [
+      {
+        id: "hl-01",
+        url: `${ASSETS_BASE_URL}/portfolio/holiday/01.jpg`,
+        caption: "Komposisi visual bernuansa hangat dengan pencahayaan sinematik.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hl-02",
+        url: `${ASSETS_BASE_URL}/portfolio/holiday/02.jpg`,
+        caption: "Eksplorasi gestur dan bayangan berkarakter kuat.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hl-03",
+        url: `${ASSETS_BASE_URL}/portfolio/holiday/03.jpg`,
+        caption: "Fokus detail tekstur dan interaksi subjek dengan ruang.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hl-04",
+        url: `${ASSETS_BASE_URL}/portfolio/holiday/04.jpg`,
+        caption: "Gradasi warna lembut terinspirasi tone visual retro film.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hl-05",
+        url: `${ASSETS_BASE_URL}/portfolio/holiday/05.jpg`,
+        caption: "Refleksi dinamis cahaya dan bayangan natural.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hl-06",
+        url: `${ASSETS_BASE_URL}/portfolio/holiday/06.jpg`,
+        caption: "Penutup seri dengan atmosfer hening dan ekspresi intim.",
+        aspect: "aspect-[3/4]"
+      }
+    ]
+  },
+  {
+    id: "hollow-skz",
+    title: "Hollow (SKZ Inspired Series)",
+    category: "Mood & Portrait Photography",
+    date: "November 2024",
+    client: "Personal Creative Project",
+    location: "Low-Key Studio Session",
+    gear: "Fujifilm X Series",
+    badge: "Mood Portrait // 4 Photos",
+    description: "Eksplorasi visual gelap dengan bayangan tegas dan ekspresi teatrikal bernuansa sinematik yang intens.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/hollow/cover.jpg`,
+    photos: [
+      {
+        id: "hw-01",
+        url: `${ASSETS_BASE_URL}/portfolio/hollow/01.jpg`,
+        caption: "Nuansa monokromatik dengan siluet tajam dan misterius.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hw-02",
+        url: `${ASSETS_BASE_URL}/portfolio/hollow/02.jpg`,
+        caption: "Permainan chiaroscuro menonjolkan ekspresi emosional subjek.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hw-03",
+        url: `${ASSETS_BASE_URL}/portfolio/hollow/03.jpg`,
+        caption: "Sorotan cahaya terarah membelah ruang gelap.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "hw-04",
+        url: `${ASSETS_BASE_URL}/portfolio/hollow/04.jpg`,
+        caption: "Kedalaman tatapan dan tekstur visual yang dramatis.",
+        aspect: "aspect-[3/4]"
+      }
+    ]
+  },
+  {
+    id: "passion-in-church",
+    title: "Passion in Church",
+    category: "Event & Church Documentary",
+    date: "November 2024",
+    client: "Community Documentary",
+    location: "Semarang Church",
+    gear: "Fujifilm X Series",
+    badge: "Documentary // 4 Photos",
+    description: "Dokumentasi kehangatan ibadah, ekspresi doa yang mendalam, dan dinamika pelayanan musik di dalam gereja.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/passion-in-church/cover.jpg`,
+    photos: [
+      {
+        id: "pic-01",
+        url: `${ASSETS_BASE_URL}/portfolio/passion-in-church/01.jpg`,
+        caption: "Momen khusyuk saat doa pembuka di bawah cahaya temaram aula.",
+        aspect: "aspect-[16/10]"
+      },
+      {
+        id: "pic-02",
+        url: `${ASSETS_BASE_URL}/portfolio/passion-in-church/02.jpg`,
+        caption: "Dinamika pelayanan musik dan pujian penuh penghayatan.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "pic-03",
+        url: `${ASSETS_BASE_URL}/portfolio/passion-in-church/03.jpg`,
+        caption: "Sorot panggung dan kehangatan kebersamaan jemaat.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "pic-04",
+        url: `${ASSETS_BASE_URL}/portfolio/passion-in-church/04.jpg`,
+        caption: "Ekspresi sukacita dan keintiman persekutuan.",
+        aspect: "aspect-[16/10]"
+      }
+    ]
+  },
+  {
+    id: "wonders-of-bali",
+    title: "Wonders of Bali (2025)",
+    category: "Travel & Landscape",
+    date: "2025",
+    client: "Personal Travel Journal",
+    location: "Bali, Indonesia",
+    gear: "Fujifilm X Series",
+    badge: "Travel Series // 3 Photos",
+    description: "Seri fotografi perjalanan mendokumentasikan keindahan alam, tekstur arsitektur khas pura, dan atmosfer tropis Pulau Dewata.",
+    coverImage: `${ASSETS_BASE_URL}/portfolio/wonders-of-bali/cover.jpg`,
+    photos: [
+      {
+        id: "wob-01",
+        url: `${ASSETS_BASE_URL}/portfolio/wonders-of-bali/01.jpg`,
+        caption: "Pintu gerbang candi bentar dengan latar panorama alam yang megah.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "wob-02",
+        url: `${ASSETS_BASE_URL}/portfolio/wonders-of-bali/02.jpg`,
+        caption: "Tekstur ukiran batu vulkanik tradisional berlumut hijau.",
+        aspect: "aspect-[3/4]"
+      },
+      {
+        id: "wob-03",
+        url: `${ASSETS_BASE_URL}/portfolio/wonders-of-bali/03.jpg`,
+        caption: "Cahaya keemasan fajar membasahi siluet pura di tepi danau.",
+        aspect: "aspect-[16/10]"
+      }
+    ]
+  },
+  {
     id: "kota-lama-nocturne",
     title: "Kota Lama Nocturne: Sepeda & Cahaya Natrium",
     category: "Street Photography",

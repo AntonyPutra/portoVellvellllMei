@@ -177,3 +177,4 @@ export function ProfileInfoTab({ profile }) {
     </div>
   );
 }
+
