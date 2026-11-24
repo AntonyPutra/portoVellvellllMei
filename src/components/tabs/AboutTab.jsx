@@ -86,12 +86,11 @@ export function AboutTab({ profile, onOpenPolaroid }) {
         <div className="relative bg-[#FFFFFF] p-4 sm:p-6 md:p-8 rounded-xl border border-[#EAD7B5] shadow-[0_2px_8px_rgba(55,25,44,0.06)] min-w-0">
           <Paperclip position="top-right" />
 
-          {/* Archival Sheet Header Row with Stamp */}
+          {/* Archival Sheet Header Row */}
           <div className="flex justify-between items-center mb-4 pb-2 border-b border-[#EAD7B5]/60 pr-8">
             <span className="font-mono text-[9px] sm:text-[10px] text-[#6B5B65] uppercase tracking-wider font-semibold">
               DOCUMENT // STATEMENT OF PURPOSE
             </span>
-            <RubberStamp text="BINUS SEMARANG" variant="red" angle={-3} className="text-[9px] sm:text-[10px]" />
           </div>
 
           {/* Personal Quote / Philosophy */}
