@@ -71,7 +71,6 @@ export function AboutTab({ profile, onOpenPolaroid }) {
                   }}
                   aria-label="Student ID Barcode"
                 />
-                <span className="font-mono text-[8px] tracking-widest text-[#37192C]">BINUS-SMG</span>
               </div>
             </div>
 
