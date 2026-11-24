@@ -159,7 +159,7 @@ export const VectorFallbacks = {
 /**
  * ArchivalImage component with automatic fallback handling
  */
-export function ArchivalImage({ src, alt, fallbackType = "generic", className = "", title = "" }) {
+export function ArchivalImage({ src, alt, fallbackType = "generic", className = "", title = "", imgClassName = "" }) {
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -169,6 +169,8 @@ export function ArchivalImage({ src, alt, fallbackType = "generic", className = 
     if (fallbackType === "photography") return <div className={className}>{VectorFallbacks.photography(title, alt)}</div>;
     return <div className={className}>{VectorFallbacks.generic(title || alt)}</div>;
   }
+
+  const imageFit = imgClassName || (className.includes('object-contain') ? 'object-contain' : 'object-cover');
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -180,7 +182,7 @@ export function ArchivalImage({ src, alt, fallbackType = "generic", className = 
       <img
         src={src}
         alt={alt || "Archive Asset"}
-        className={`w-full h-full object-cover transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        className={`w-full h-full ${imageFit} transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         onLoad={() => setIsLoading(false)}
         onError={() => setHasError(true)}
       />

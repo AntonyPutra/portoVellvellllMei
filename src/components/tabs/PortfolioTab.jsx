@@ -392,13 +392,14 @@ export function PortfolioTab({ projects = [], items = [], onShowToast }) {
               </div>
 
               {/* High-res Image Viewport */}
-              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-[#10050E] rounded-lg overflow-hidden mb-3.5 shadow-2xl border border-white/10 flex items-center justify-center">
+              <div className="relative w-full h-[52vh] sm:h-[65vh] max-h-[680px] bg-[#0C040B] rounded-lg overflow-hidden mb-3.5 shadow-2xl border border-white/10 flex items-center justify-center p-1 sm:p-2">
                 <ArchivalImage
                   src={activePhoto.url || activePhoto}
                   alt={activePhoto.caption || "Inspection"}
                   fallbackType="photography"
                   title={activePhoto.caption || selectedProject.title}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full flex items-center justify-center"
+                  imgClassName="object-contain"
                 />
 
                 {/* Left Carousel Arrow */}

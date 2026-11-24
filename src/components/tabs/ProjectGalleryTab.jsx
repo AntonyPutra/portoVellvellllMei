@@ -209,13 +209,14 @@ export function ProjectGalleryTab({ category, items, onShowToast }) {
               </p>
 
               {/* High-res Image / Vector View */}
-              <div className="w-full aspect-[16/10] bg-[#1C0E17] rounded-lg overflow-hidden mb-4 sm:mb-6 shadow-md">
+              <div className="w-full aspect-[16/10] bg-[#1C0E17] rounded-lg overflow-hidden mb-4 sm:mb-6 shadow-md flex items-center justify-center">
                 <ArchivalImage
                   src={selectedItem.image}
                   alt={selectedItem.title}
                   fallbackType={category === 'branding' ? 'branding' : 'generic'}
                   title={selectedItem.title}
-                  className="w-full h-full"
+                  className="w-full h-full flex items-center justify-center"
+                  imgClassName="object-contain"
                 />
               </div>
 
