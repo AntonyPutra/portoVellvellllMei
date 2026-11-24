@@ -80,13 +80,13 @@ export function PortfolioTab({ projects = [], items = [], onShowToast }) {
                 <div className="font-mono text-[9px] sm:text-xs tracking-widest text-[#B33939] font-bold uppercase mb-1 flex items-center gap-1.5 sm:gap-2">
                   <span>RECORD CLASSIFICATION // 04</span>
                   <span>//</span>
-                  <span>STREET PHOTOGRAPHY ARCHIVE</span>
+                  <span>PHOTOGRAPHY ARCHIVE</span>
                 </div>
                 <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-[#37192C] tracking-tight leading-tight">
-                  Street Photography Projects & Albums
+                  Photography Projects & Albums
                 </h2>
                 <p className="font-editorial text-sm sm:text-base md:text-lg italic text-[#6B5B65] mt-0.5 sm:mt-1">
-                  Dokumentasi visual jalanan, lanskap perkotaan, dinamika pasar tradisional, dan narasi manusia di sudut kota.
+                  Eksplorasi visual fotografi konseptual, mood portrait, dokumenter gereja, dan lanskap perjalanan.
                 </p>
               </div>
 
